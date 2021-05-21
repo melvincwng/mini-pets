@@ -1,6 +1,5 @@
 [gd_scene load_steps=42 format=2]
 
-[ext_resource path="res://Background/House.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/once_upon_a_time_loop.wav" type="AudioStream" id=2]
 [ext_resource path="res://Player/Idle/black (2).png" type="Texture" id=3]
 [ext_resource path="res://Player/Idle/black (4).png" type="Texture" id=4]
@@ -35,6 +34,7 @@
 [ext_resource path="res://Player/Idle/fire (4).png" type="Texture" id=33]
 [ext_resource path="res://Player/Idle/fire (3).png" type="Texture" id=34]
 [ext_resource path="res://Player/Idle/fire (8).png" type="Texture" id=35]
+[ext_resource path="res://Background/farm.png" type="Texture" id=36]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -92,9 +92,9 @@ __meta__ = {
 }
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 741.935, 305.635 )
-scale = Vector2( 6.7439, 9.72523 )
-texture = ExtResource( 1 )
+position = Vector2( 384, 312 )
+scale = Vector2( 3.39309, 4.39351 )
+texture = ExtResource( 36 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -128,7 +128,7 @@ position = Vector2( 592, 506.076 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 4
+frame = 2
 playing = true
 
 [node name="redSlime" type="AnimatedSprite" parent="."]
