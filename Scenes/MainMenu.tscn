@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Background/smoke2.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/once_upon_a_time_loop.wav" type="AudioStream" id=2]
@@ -41,6 +41,7 @@
 [ext_resource path="res://Background/smoke0.png" type="Texture" id=39]
 [ext_resource path="res://Scenes/Start button.gd" type="Script" id=40]
 [ext_resource path="res://Scenes/Instructions button.gd" type="Script" id=41]
+[ext_resource path="res://Scenes/Extra button.gd" type="Script" id=42]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -173,7 +174,7 @@ position = Vector2( 112, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="blackSlime" type="AnimatedSprite" parent="."]
@@ -181,7 +182,7 @@ position = Vector2( 272, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="blueSlime" type="AnimatedSprite" parent="."]
@@ -189,7 +190,7 @@ position = Vector2( 432, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="fireSlime" type="AnimatedSprite" parent="."]
@@ -197,7 +198,7 @@ position = Vector2( 592, 506.076 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 2
+frame = 7
 playing = true
 
 [node name="redSlime" type="AnimatedSprite" parent="."]
@@ -205,7 +206,7 @@ position = Vector2( 752, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="greenSlime" type="AnimatedSprite" parent="."]
@@ -213,14 +214,13 @@ position = Vector2( 912, 506.076 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 3
 playing = true
 
 [node name="smokeParticles" type="AnimatedSprite" parent="."]
 position = Vector2( 608, 224 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 6
+frame = 5
 playing = true
 offset = Vector2( 10, 0 )
 
@@ -312,6 +312,7 @@ margin_bottom = 475.0
 custom_styles/hover = SubResource( 22 )
 custom_styles/pressed = SubResource( 23 )
 custom_styles/normal = SubResource( 24 )
+script = ExtResource( 42 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -333,3 +334,6 @@ __meta__ = {
 [connection signal="mouse_entered" from="Instructions button" to="Instructions button" method="_on_Instructions_button_mouse_entered"]
 [connection signal="mouse_exited" from="Instructions button" to="Instructions button" method="_on_Instructions_button_mouse_exited"]
 [connection signal="pressed" from="Instructions button" to="Instructions button" method="_on_Instructions_button_pressed"]
+[connection signal="mouse_entered" from="Extra button" to="Extra button" method="_on_Extra_button_mouse_entered"]
+[connection signal="mouse_exited" from="Extra button" to="Extra button" method="_on_Extra_button_mouse_exited"]
+[connection signal="pressed" from="Extra button" to="Extra button" method="_on_Extra_button_pressed"]
