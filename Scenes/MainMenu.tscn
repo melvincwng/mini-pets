@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Background/smoke2.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/once_upon_a_time_loop.wav" type="AudioStream" id=2]
@@ -107,8 +107,48 @@ font_data = SubResource( 8 )
 font_path = "res://Font/yoster-island.regular.ttf"
 
 [sub_resource type="DynamicFont" id=11]
-size = 23
+size = 20
 font_data = SubResource( 10 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Font/yoster-island.regular.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 50
+font_data = SubResource( 12 )
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://Font/yoster-island.regular.ttf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 50
+outline_color = Color( 0.0078125, 0, 0, 1 )
+font_data = SubResource( 17 )
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="DynamicFontData" id=25]
+font_path = "res://Font/yoster-island.regular.ttf"
+
+[sub_resource type="DynamicFont" id=26]
+size = 50
+font_data = SubResource( 25 )
 
 [node name="Main menu" type="Control"]
 anchor_right = 1.0
@@ -131,7 +171,7 @@ position = Vector2( 112, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="blackSlime" type="AnimatedSprite" parent="."]
@@ -139,7 +179,6 @@ position = Vector2( 272, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="blueSlime" type="AnimatedSprite" parent="."]
@@ -147,7 +186,7 @@ position = Vector2( 432, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="fireSlime" type="AnimatedSprite" parent="."]
@@ -155,6 +194,7 @@ position = Vector2( 592, 506.076 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
+frame = 6
 playing = true
 
 [node name="redSlime" type="AnimatedSprite" parent="."]
@@ -162,7 +202,6 @@ position = Vector2( 752, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="greenSlime" type="AnimatedSprite" parent="."]
@@ -170,14 +209,14 @@ position = Vector2( 912, 506.076 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="smokeParticles" type="AnimatedSprite" parent="."]
 position = Vector2( 608, 224 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 2
+frame = 9
 playing = true
 offset = Vector2( 10, 0 )
 
@@ -196,13 +235,88 @@ __meta__ = {
 }
 
 [node name="Credits" type="Label" parent="."]
-margin_left = 704.0
+margin_left = 360.0
 margin_top = 560.0
-margin_right = 1010.0
+margin_right = 666.0
 margin_bottom = 611.0
 custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Developed by: Melvin Ng"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start button" type="Button" parent="."]
+margin_left = 688.0
+margin_top = 256.0
+margin_right = 848.0
+margin_bottom = 307.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Label" parent="Start button"]
+margin_left = 8.0
+margin_right = 168.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Start"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions button" type="Button" parent="."]
+anchor_right = 0.062
+anchor_bottom = 0.027
+margin_left = 632.0
+margin_top = 336.0
+margin_right = 888.512
+margin_bottom = 375.8
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Label" parent="Instructions button"]
+margin_right = 318.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "How to Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Extra button" type="Button" parent="."]
+margin_left = 704.0
+margin_top = 424.0
+margin_right = 864.0
+margin_bottom = 475.0
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Extra" type="Label" parent="Extra button"]
+margin_right = 158.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Extra"
 align = 1
 valign = 1
 __meta__ = {
