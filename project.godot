@@ -19,6 +19,10 @@ config/name="Mini Pets"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=595
+
 [importer_defaults]
 
 texture={

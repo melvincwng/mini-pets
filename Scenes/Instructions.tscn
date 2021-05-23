@@ -1,17 +1,105 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Background/farm.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Font/yoster-island.regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Back button.gd" type="Script" id=4]
 
-[node name="Instructions" type="Node2D"]
-position = Vector2( 384, 312 )
-scale = Vector2( 3.393, 4.394 )
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 3 )
+
+[node name="Instructions" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 231.064, 0 )
+position = Vector2( 1160, 280 )
+scale = Vector2( 3.393, 4.394 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -15.0
 autoplay = true
+
+[node name="Top Label" type="Label" parent="."]
+anchor_right = 0.519
+margin_left = 328.0
+margin_top = 120.0
+margin_right = 686.0
+margin_bottom = 171.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Instructions"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Middle Label" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 200.0
+margin_right = 917.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mini Pets is a digital pet game where you raise a virtual pet.
+
+Feed, Play with, and Clean your pet only ONCE every week!
+
+For more games, visit melvinng.itch.io  &&&"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Back button" type="Button" parent="."]
+margin_left = 464.0
+margin_top = 400.0
+margin_right = 560.0
+margin_bottom = 440.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Back Text" type="Label" parent="Back button"]
+margin_top = 8.0
+margin_right = 94.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "< Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]

@@ -110,7 +110,7 @@ font_data = SubResource( 8 )
 font_path = "res://Font/yoster-island.regular.ttf"
 
 [sub_resource type="DynamicFont" id=11]
-size = 23
+size = 25
 font_data = SubResource( 10 )
 
 [sub_resource type="StyleBoxEmpty" id=12]
@@ -161,9 +161,12 @@ __meta__ = {
 }
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 384, 312 )
+position = Vector2( 381.526, 282.136 )
 scale = Vector2( 3.39309, 4.39351 )
 texture = ExtResource( 36 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
@@ -171,99 +174,121 @@ volume_db = -10.0
 autoplay = true
 
 [node name="greySlime" type="AnimatedSprite" parent="."]
-position = Vector2( 112, 506.076 )
+position = Vector2( 109.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="blackSlime" type="AnimatedSprite" parent="."]
-position = Vector2( 272, 506.076 )
+position = Vector2( 269.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="blueSlime" type="AnimatedSprite" parent="."]
-position = Vector2( 432, 506.076 )
+position = Vector2( 429.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="fireSlime" type="AnimatedSprite" parent="."]
-position = Vector2( 592, 506.076 )
+position = Vector2( 589.526, 476.212 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 2
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="redSlime" type="AnimatedSprite" parent="."]
-position = Vector2( 752, 506.076 )
+position = Vector2( 749.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="greenSlime" type="AnimatedSprite" parent="."]
-position = Vector2( 912, 506.076 )
+position = Vector2( 909.526, 476.212 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 3
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="smokeParticles" type="AnimatedSprite" parent="."]
-position = Vector2( 608, 224 )
+position = Vector2( 605.526, 194.136 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 6
+frame = 7
 playing = true
 offset = Vector2( 10, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Title" type="Label" parent="."]
-margin_left = 256.0
-margin_top = 104.0
-margin_right = 766.0
-margin_bottom = 205.0
+margin_left = 253.526
+margin_top = 74.136
+margin_right = 763.526
+margin_bottom = 175.136
 custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Mini Pets "
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Credits" type="Label" parent="."]
-margin_left = 360.0
-margin_top = 560.0
-margin_right = 666.0
-margin_bottom = 611.0
+margin_left = 357.526
+margin_top = 530.136
+margin_right = 663.526
+margin_bottom = 581.136
 custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Developed by: Melvin Ng"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Start button" type="Button" parent="."]
-margin_left = 704.0
-margin_top = 256.0
-margin_right = 864.0
-margin_bottom = 307.0
+margin_left = 701.526
+margin_top = 226.136
+margin_right = 861.526
+margin_bottom = 277.136
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
 script = ExtResource( 40 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -282,15 +307,16 @@ __meta__ = {
 [node name="Instructions button" type="Button" parent="."]
 anchor_right = 0.062
 anchor_bottom = 0.027
-margin_left = 632.0
-margin_top = 336.0
-margin_right = 888.512
-margin_bottom = 375.8
+margin_left = 629.526
+margin_top = 306.136
+margin_right = 886.038
+margin_bottom = 345.936
 custom_styles/hover = SubResource( 17 )
 custom_styles/pressed = SubResource( 18 )
 custom_styles/normal = SubResource( 19 )
 script = ExtResource( 41 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -307,15 +333,16 @@ __meta__ = {
 }
 
 [node name="Extra button" type="Button" parent="."]
-margin_left = 704.0
-margin_top = 424.0
-margin_right = 864.0
-margin_bottom = 475.0
+margin_left = 701.526
+margin_top = 394.136
+margin_right = 861.526
+margin_bottom = 445.136
 custom_styles/hover = SubResource( 22 )
 custom_styles/pressed = SubResource( 23 )
 custom_styles/normal = SubResource( 24 )
 script = ExtResource( 42 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
