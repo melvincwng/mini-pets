@@ -175,7 +175,6 @@ position = Vector2( 112, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="blackSlime" type="AnimatedSprite" parent="."]
@@ -183,6 +182,7 @@ position = Vector2( 272, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
+frame = 4
 playing = true
 
 [node name="blueSlime" type="AnimatedSprite" parent="."]
@@ -190,7 +190,6 @@ position = Vector2( 432, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="fireSlime" type="AnimatedSprite" parent="."]
@@ -198,7 +197,7 @@ position = Vector2( 592, 506.076 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="redSlime" type="AnimatedSprite" parent="."]
@@ -206,6 +205,7 @@ position = Vector2( 752, 506.076 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
+frame = 4
 playing = true
 
 [node name="greenSlime" type="AnimatedSprite" parent="."]
@@ -213,14 +213,14 @@ position = Vector2( 912, 506.076 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="smokeParticles" type="AnimatedSprite" parent="."]
 position = Vector2( 608, 224 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 8
+frame = 5
 playing = true
 offset = Vector2( 10, 0 )
 

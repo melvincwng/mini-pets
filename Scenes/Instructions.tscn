@@ -1,3 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Background/farm.png" type="Texture" id=1]
+
+[node name="Instructions" type="Node2D"]
+position = Vector2( 384, 312 )
+scale = Vector2( 3.393, 4.394 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 231.064, 0 )
+texture = ExtResource( 1 )
