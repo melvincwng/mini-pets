@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Background/farm.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Font/yoster-island.regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Back button.gd" type="Script" id=4]
 
-[node name="Extra" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 3 )
+
+[node name="Extra" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( -144, 312 )
+position = Vector2( -136, 280 )
 scale = Vector2( 3.393, 4.394 )
 texture = ExtResource( 1 )
 
@@ -14,3 +29,30 @@ texture = ExtResource( 1 )
 stream = ExtResource( 2 )
 volume_db = -15.0
 autoplay = true
+
+[node name="Back button" type="Button" parent="."]
+margin_left = 456.0
+margin_top = 288.0
+margin_right = 552.0
+margin_bottom = 328.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Back button"]
+margin_top = 8.0
+margin_right = 94.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "< Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
