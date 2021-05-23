@@ -117,7 +117,7 @@ font_data = SubResource( 10 )
 
 [sub_resource type="StyleBoxEmpty" id=13]
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id=27]
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://Font/yoster-island.regular.ttf"
@@ -211,7 +211,6 @@ position = Vector2( 589.526, 476.212 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -243,7 +242,7 @@ __meta__ = {
 position = Vector2( 605.526, 194.136 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 4
+frame = 9
 playing = true
 offset = Vector2( 10, 0 )
 __meta__ = {
@@ -281,13 +280,13 @@ __meta__ = {
 }
 
 [node name="Start button" type="Button" parent="."]
-margin_left = 701.526
-margin_top = 226.136
-margin_right = 861.526
-margin_bottom = 277.136
+margin_left = 702.0
+margin_top = 226.0
+margin_right = 872.0
+margin_bottom = 277.0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/normal = SubResource( 27 )
 script = ExtResource( 40 )
 __meta__ = {
 "_edit_lock_": true,
@@ -295,7 +294,8 @@ __meta__ = {
 }
 
 [node name="Start" type="Label" parent="Start button"]
-margin_right = 160.0
+margin_left = 2.0
+margin_right = 162.0
 margin_bottom = 51.0
 custom_fonts/font = SubResource( 16 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
