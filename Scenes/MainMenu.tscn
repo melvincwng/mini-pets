@@ -117,7 +117,7 @@ font_data = SubResource( 10 )
 
 [sub_resource type="StyleBoxEmpty" id=13]
 
-[sub_resource type="StyleBoxEmpty" id=27]
+[sub_resource type="StyleBoxEmpty" id=14]
 
 [sub_resource type="DynamicFontData" id=15]
 font_path = "res://Font/yoster-island.regular.ttf"
@@ -178,7 +178,6 @@ position = Vector2( 109.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -189,7 +188,7 @@ position = Vector2( 269.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -200,7 +199,6 @@ position = Vector2( 429.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -211,6 +209,7 @@ position = Vector2( 589.526, 476.212 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -221,7 +220,7 @@ position = Vector2( 749.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -232,7 +231,7 @@ position = Vector2( 909.526, 476.212 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 4
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -242,7 +241,7 @@ __meta__ = {
 position = Vector2( 605.526, 194.136 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 9
+frame = 7
 playing = true
 offset = Vector2( 10, 0 )
 __meta__ = {
@@ -286,7 +285,7 @@ margin_right = 872.0
 margin_bottom = 277.0
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 27 )
+custom_styles/normal = SubResource( 14 )
 script = ExtResource( 40 )
 __meta__ = {
 "_edit_lock_": true,
