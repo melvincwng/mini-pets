@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Background/farm.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://Player/Jump/metal (3).png" type="Texture" id=18]
 [ext_resource path="res://Player/Jump/metal (4).png" type="Texture" id=19]
 [ext_resource path="res://Player/Jump/metal (8).png" type="Texture" id=20]
+[ext_resource path="res://Food/Shrimp.png" type="Texture" id=21]
+[ext_resource path="res://Food/Steak.png" type="Texture" id=22]
+[ext_resource path="res://Food/Waffles.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -97,13 +100,31 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 6
 playing = true
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="metalSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 6 )
+frame = 2
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shrimp" type="Sprite" parent="."]
+position = Vector2( 744, 528 )
+texture = ExtResource( 21 )
+
+[node name="Steak" type="Sprite" parent="."]
+position = Vector2( 704, 528 )
+texture = ExtResource( 22 )
+
+[node name="Waffles" type="Sprite" parent="."]
+position = Vector2( 664, 528 )
+texture = ExtResource( 23 )
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
