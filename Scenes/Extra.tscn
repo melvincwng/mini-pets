@@ -100,6 +100,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -110,7 +111,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 6 )
-frame = 2
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -119,12 +120,21 @@ __meta__ = {
 [node name="Shrimp" type="Sprite" parent="."]
 position = Vector2( 744, 528 )
 texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Steak" type="Sprite" parent="."]
 position = Vector2( 704, 528 )
 texture = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Waffles" type="Sprite" parent="."]
 position = Vector2( 664, 528 )
 texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
