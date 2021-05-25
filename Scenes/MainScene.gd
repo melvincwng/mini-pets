@@ -14,7 +14,7 @@ func _ready():
 	Signal.connect("feed_pet", self, "feed_increase_level")
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
-	sprite.play("Idle")
+	sprite.play("IdleBlack")
 	
 # This is similar to useEffect hook in JS
 # when line 17 aka the transparent slime "Idle" animation ends
@@ -22,9 +22,9 @@ func _ready():
 # to play the correct animated slime based on the level of the player	
 func _on_Player_animation_finished():
 	if level < 1:
-		sprite.play("Idle")
-	elif level >= 1:
 		sprite.play("IdleBlack")
+	elif level >= 1:
+		sprite.play("Idle")
 			
 func feed_increase_level():
 	$Player/feedSound.play()
@@ -52,21 +52,21 @@ func clean_increase_level():
 	
 func evolve_pet_feed():
 	if level < 1:
-		sprite.play("Feed")
-	elif level >= 1:
 		sprite.play("FeedBlack")
+	elif level >= 1:
+		sprite.play("Feed")
 
 func evolve_pet_play():
 	if level < 1:
-		sprite.play("Play")
-	elif level >= 1:
 		sprite.play("PlayBlack")
+	elif level >= 1:
+		sprite.play("Play")
 		
 func evolve_pet_clean():
 	if level < 1:
-		sprite.play("Clean")
-	elif level >= 1:
 		sprite.play("CleanBlack")
+	elif level >= 1:
+		sprite.play("Clean")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
