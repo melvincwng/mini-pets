@@ -16,13 +16,23 @@ func _ready():
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("Idle")
 	
+# This is similar to useEffect hook in JS
+# when line 17 aka the transparent slime "Idle" animation ends
+# this function func _on_Player_animation_finished() will automatically run
+# to play the correct animated slime based on the level of the player	
+func _on_Player_animation_finished():
+	if level < 1:
+		sprite.play("Idle")
+	elif level >= 1:
+		sprite.play("IdleBlack")
+			
 func feed_increase_level():
 	$Player/feedSound.play()
 	level += 0.25
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
-	sprite.play("Feed")
+	evolve_pet_feed()
 	
 func play_increase_level():
 	$Player/playSound.play()
@@ -30,7 +40,7 @@ func play_increase_level():
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
-	sprite.play("Play")
+	evolve_pet_play()
 	
 func clean_increase_level():
 	$Player/cleanSound.play()
@@ -38,8 +48,26 @@ func clean_increase_level():
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
-	sprite.play("Clean")
+	evolve_pet_clean()
+	
+func evolve_pet_feed():
+	if level < 1:
+		sprite.play("Feed")
+	elif level >= 1:
+		sprite.play("FeedBlack")
 
+func evolve_pet_play():
+	if level < 1:
+		sprite.play("Play")
+	elif level >= 1:
+		sprite.play("PlayBlack")
+		
+func evolve_pet_clean():
+	if level < 1:
+		sprite.play("Clean")
+	elif level >= 1:
+		sprite.play("CleanBlack")
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# To setup the Date & Time clocks
@@ -86,6 +114,3 @@ func _process(delta):
 	dayLabel.clear()
 	dayLabel.add_text(dayString)
 	
-	
-func _on_Player_animation_finished():
-	sprite.play("Idle")
