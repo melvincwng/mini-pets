@@ -113,7 +113,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 6
+frame = 5
 playing = true
 flip_h = true
 __meta__ = {
@@ -124,6 +124,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 6 )
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -133,15 +134,22 @@ __meta__ = {
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 7 )
-frame = 1
+frame = 3
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="transparentSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 7 )
+frame = 2
 playing = true
 flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Shrimp" type="Sprite" parent="."]
 position = Vector2( 744, 528 )
