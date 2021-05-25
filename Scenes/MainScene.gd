@@ -17,6 +17,7 @@ func _ready():
 	sprite.play("Idle")
 	
 func feed_increase_level():
+	$Player/feedSound.play()
 	level += 0.25
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
@@ -24,6 +25,7 @@ func feed_increase_level():
 	sprite.play("Feed")
 	
 func play_increase_level():
+	$Player/playSound.play()
 	level += 0.15
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
@@ -31,6 +33,7 @@ func play_increase_level():
 	sprite.play("Play")
 	
 func clean_increase_level():
+	$Player/cleanSound.play()
 	level += 0.1
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()

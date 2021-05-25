@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -36,6 +36,9 @@
 [ext_resource path="res://Player/Clean/transparent (1).png" type="Texture" id=34]
 [ext_resource path="res://Player/Clean/transparent (5).png" type="Texture" id=35]
 [ext_resource path="res://Player/Clean/transparent (2).png" type="Texture" id=36]
+[ext_resource path="res://Sounds/feed.ogg" type="AudioStream" id=37]
+[ext_resource path="res://Sounds/clean.ogg" type="AudioStream" id=38]
+[ext_resource path="res://Sounds/jump.ogg" type="AudioStream" id=39]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -57,7 +60,7 @@ animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "Play",
-"speed": 7.5
+"speed": 10.0
 } ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -127,10 +130,22 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Clean"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="feedSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 37 )
+volume_db = -15.0
+
+[node name="playSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 39 )
+
+[node name="cleanSound" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 38 )
+volume_db = -15.0
 
 [node name="Level" type="RichTextLabel" parent="."]
 margin_left = 24.0
