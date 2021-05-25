@@ -33,13 +33,13 @@
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 font_data = ExtResource( 3 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
@@ -47,7 +47,7 @@ animations = [ {
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 20 ), ExtResource( 17 ) ],
 "loop": true,
@@ -55,7 +55,7 @@ animations = [ {
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
@@ -88,18 +88,16 @@ margin_right = 552.0
 margin_bottom = 328.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 7 )
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Back Text" type="Label" parent="Back button"]
-margin_top = 8.0
-margin_right = 94.0
-margin_bottom = 34.0
-custom_fonts/font = SubResource( 4 )
+margin_right = 96.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
 align = 1
@@ -111,9 +109,9 @@ __meta__ = {
 [node name="metalSlime1" type="AnimatedSprite" parent="."]
 position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "Idle"
-frame = 4
+frame = 5
 playing = true
 flip_h = true
 __meta__ = {
@@ -123,8 +121,8 @@ __meta__ = {
 [node name="metalSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 6 )
-frame = 7
+frames = SubResource( 5 )
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -133,8 +131,8 @@ __meta__ = {
 [node name="transparentSlime" type="AnimatedSprite" parent="."]
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 7 )
-frame = 4
+frames = SubResource( 6 )
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -143,8 +141,8 @@ __meta__ = {
 [node name="transparentSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 7 )
-frame = 3
+frames = SubResource( 6 )
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {

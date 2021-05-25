@@ -64,13 +64,13 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 25
 font_data = ExtResource( 3 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 5 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 18 ) ],
 "loop": true,
@@ -78,7 +78,7 @@ animations = [ {
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 39 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
@@ -86,7 +86,7 @@ animations = [ {
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 40 ), ExtResource( 49 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 46 ), ExtResource( 48 ) ],
 "loop": true,
@@ -154,7 +154,7 @@ margin_right = 560.0
 margin_bottom = 440.0
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 9 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true,
@@ -162,10 +162,9 @@ __meta__ = {
 }
 
 [node name="Back Text" type="Label" parent="Back button"]
-margin_top = 8.0
-margin_right = 94.0
-margin_bottom = 34.0
-custom_fonts/font = SubResource( 6 )
+margin_right = 96.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
 align = 1
@@ -177,9 +176,9 @@ __meta__ = {
 [node name="Girl" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 7 )
+frames = SubResource( 6 )
 animation = "Idle"
-frame = 3
+frame = 17
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -188,9 +187,9 @@ __meta__ = {
 [node name="Boy" type="AnimatedSprite" parent="."]
 position = Vector2( 952, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 8 )
+frames = SubResource( 7 )
 animation = "Idle"
-frame = 5
+frame = 3
 playing = true
 flip_h = true
 __meta__ = {
@@ -200,9 +199,9 @@ __meta__ = {
 [node name="slimeJump" type="AnimatedSprite" parent="."]
 position = Vector2( 416, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 9 )
+frames = SubResource( 8 )
 animation = "Jump"
-frame = 11
+frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -211,9 +210,9 @@ __meta__ = {
 [node name="slimeJump2" type="AnimatedSprite" parent="."]
 position = Vector2( 624, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 9 )
+frames = SubResource( 8 )
 animation = "Jump"
-frame = 11
+frame = 5
 playing = true
 flip_h = true
 __meta__ = {
