@@ -14,12 +14,16 @@ func _ready():
 func _process(delta):
 	# To setup the Date & Time clocks
 	var timeDict = OS.get_datetime()
+	var second = str(timeDict.second)
 	var minute = str(timeDict.minute)
 	var hour = str(timeDict.hour)
 	var day = str(timeDict.day)
 	var month = str(timeDict.month)
 	var year = str(timeDict.year)
 	
+	if int(second) < 10:
+		second = '0' + second
+		
 	if int(minute) < 10:
 		minute = '0' + minute
 		
@@ -33,7 +37,7 @@ func _process(delta):
 		month = '0' + month
 	
 	var dateString = "Date: " + day + '-' + month + '-' + year
-	var timeString = hour + ":" + minute
+	var timeString = hour + ":" + minute + ":" + second
 	
 	if int(hour) < 12:
 		timeString += ' AM'

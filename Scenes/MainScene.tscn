@@ -74,6 +74,7 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -182,26 +183,24 @@ __meta__ = {
 }
 
 [node name="Time" type="RichTextLabel" parent="."]
-margin_left = 840.0
+margin_left = 800.0
 margin_top = 40.0
-margin_right = 984.0
+margin_right = 976.0
 margin_bottom = 72.0
 custom_fonts/normal_font = SubResource( 4 )
-text = "00:00 AM"
+text = "00:00:00 AM"
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Day" type="RichTextLabel" parent="."]
-margin_left = 848.0
+margin_left = 840.0
 margin_top = 72.0
-margin_right = 1003.0
+margin_right = 995.0
 margin_bottom = 108.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Day: 0"
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
