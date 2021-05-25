@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -95,6 +95,34 @@
 [ext_resource path="res://Player/Feed/blue (1).png" type="Texture" id=93]
 [ext_resource path="res://Player/Feed/blue (3).png" type="Texture" id=94]
 [ext_resource path="res://Player/Feed/blue (6).png" type="Texture" id=95]
+[ext_resource path="res://Player/Idle/red (1).png" type="Texture" id=96]
+[ext_resource path="res://Player/Idle/red (2).png" type="Texture" id=97]
+[ext_resource path="res://Player/Idle/red (3).png" type="Texture" id=98]
+[ext_resource path="res://Player/Idle/red (4).png" type="Texture" id=99]
+[ext_resource path="res://Player/Idle/red (5).png" type="Texture" id=100]
+[ext_resource path="res://Player/Jump/red (6).png" type="Texture" id=101]
+[ext_resource path="res://Player/Jump/red (5).png" type="Texture" id=102]
+[ext_resource path="res://Player/Jump/red (2).png" type="Texture" id=103]
+[ext_resource path="res://Player/Jump/red (3).png" type="Texture" id=104]
+[ext_resource path="res://Player/Jump/red (4).png" type="Texture" id=105]
+[ext_resource path="res://Player/Jump/red (1).png" type="Texture" id=106]
+[ext_resource path="res://Player/Jump/red (8).png" type="Texture" id=107]
+[ext_resource path="res://Player/Jump/red (9).png" type="Texture" id=108]
+[ext_resource path="res://Player/Jump/red (10).png" type="Texture" id=109]
+[ext_resource path="res://Player/Jump/red (12).png" type="Texture" id=110]
+[ext_resource path="res://Player/Jump/red (11).png" type="Texture" id=111]
+[ext_resource path="res://Player/Jump/red (7).png" type="Texture" id=112]
+[ext_resource path="res://Player/Feed/red (4).png" type="Texture" id=113]
+[ext_resource path="res://Player/Feed/red (6).png" type="Texture" id=114]
+[ext_resource path="res://Player/Feed/red (1).png" type="Texture" id=115]
+[ext_resource path="res://Player/Feed/red (3).png" type="Texture" id=116]
+[ext_resource path="res://Player/Feed/red (5).png" type="Texture" id=117]
+[ext_resource path="res://Player/Feed/red (2).png" type="Texture" id=118]
+[ext_resource path="res://Player/Clean/red (2).png" type="Texture" id=119]
+[ext_resource path="res://Player/Clean/red (1).png" type="Texture" id=120]
+[ext_resource path="res://Player/Clean/red (3).png" type="Texture" id=121]
+[ext_resource path="res://Player/Clean/red (4).png" type="Texture" id=122]
+[ext_resource path="res://Player/Clean/red (5).png" type="Texture" id=123]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -133,9 +161,29 @@ animations = [ {
 "name": "Clean",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "FeedRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
+"loop": true,
+"name": "PlayRed",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "CleanRed",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
 "loop": true,
 "name": "FeedBlue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "IdleRed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
@@ -225,8 +273,8 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "CleanBlue"
-frame = 2
+animation = "CleanRed"
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
