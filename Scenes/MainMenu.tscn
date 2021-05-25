@@ -178,7 +178,7 @@ position = Vector2( 109.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -189,6 +189,7 @@ position = Vector2( 269.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -199,7 +200,7 @@ position = Vector2( 429.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 3 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -210,8 +211,8 @@ position = Vector2( 589.526, 476.212 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 6
 playing = true
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -221,7 +222,9 @@ position = Vector2( 749.526, 476.212 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
+frame = 2
 playing = true
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -231,8 +234,9 @@ position = Vector2( 909.526, 476.212 )
 scale = Vector2( 4, 4.12978 )
 frames = SubResource( 6 )
 animation = "Idle"
-frame = 2
+frame = 4
 playing = true
+flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }

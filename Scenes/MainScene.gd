@@ -31,8 +31,10 @@ func _on_Player_animation_finished():
 		sprite.play("IdleGreen")
 	elif level >= 4 and level < 5:
 		sprite.play("IdleGrey")	
-	else:
+	elif level >= 5 and level < 6:
 		sprite.play("Idle")
+	else:
+		sprite.play("IdleFire")
 			
 func feed_increase_level():
 	$Player/feedSound.play()
@@ -69,8 +71,10 @@ func evolve_pet_feed():
 		sprite.play("FeedGreen")
 	elif level >= 4 and level < 5:
 		sprite.play("FeedGrey")
-	else:
+	elif level >= 5 and level < 6:
 		sprite.play("Feed")
+	else:
+		sprite.play("FeedFire")
 
 func evolve_pet_play():
 	if level < 1:
@@ -83,8 +87,10 @@ func evolve_pet_play():
 		sprite.play("PlayGreen")
 	elif level >= 4 and level < 5:
 		sprite.play("PlayGrey")
-	else:
+	elif level >= 5 and level < 6:
 		sprite.play("Play")
+	else:
+		sprite.play("PlayFire")
 		
 func evolve_pet_clean():
 	if level < 1:
@@ -97,8 +103,10 @@ func evolve_pet_clean():
 		sprite.play("CleanGreen")
 	elif level >= 4 and level < 5:
 		sprite.play("CleanGrey")
-	else:
+	elif level >= 5 and level < 6:
 		sprite.play("Clean")
+	else:
+		sprite.play("CleanFire")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

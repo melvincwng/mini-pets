@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=2]
+[gd_scene load_steps=225 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -179,32 +179,47 @@
 [ext_resource path="res://Player/Clean/grey (1).png" type="Texture" id=177]
 [ext_resource path="res://Player/Feed/grey (1).png" type="Texture" id=178]
 [ext_resource path="res://Player/Clean/grey (2).png" type="Texture" id=179]
+[ext_resource path="res://Player/Idle/fire (1).png" type="Texture" id=180]
+[ext_resource path="res://Player/Idle/fire (8).png" type="Texture" id=181]
+[ext_resource path="res://Player/Idle/fire (2).png" type="Texture" id=182]
+[ext_resource path="res://Player/Idle/fire (6).png" type="Texture" id=183]
+[ext_resource path="res://Player/Idle/fire (4).png" type="Texture" id=184]
+[ext_resource path="res://Player/Idle/fire (7).png" type="Texture" id=185]
+[ext_resource path="res://Player/Idle/fire (3).png" type="Texture" id=186]
+[ext_resource path="res://Player/Idle/fire (5).png" type="Texture" id=187]
+[ext_resource path="res://Player/Clean/fire (5).png" type="Texture" id=189]
+[ext_resource path="res://Player/Clean/fire (6).png" type="Texture" id=190]
+[ext_resource path="res://Player/Clean/fire (7).png" type="Texture" id=191]
+[ext_resource path="res://Player/Clean/fire (8).png" type="Texture" id=192]
+[ext_resource path="res://Player/Clean/fire (11).png" type="Texture" id=196]
+[ext_resource path="res://Player/Clean/fire (9).png" type="Texture" id=197]
+[ext_resource path="res://Player/Clean/fire (10).png" type="Texture" id=198]
+[ext_resource path="res://Player/Transform/fire (3).png" type="Texture" id=199]
+[ext_resource path="res://Player/Transform/fire (2).png" type="Texture" id=200]
+[ext_resource path="res://Player/Transform/fire (4).png" type="Texture" id=201]
+[ext_resource path="res://Player/Transform/fire (1).png" type="Texture" id=202]
+[ext_resource path="res://Player/Transform/fire (-1).png" type="Texture" id=203]
+[ext_resource path="res://Player/Transform/fire (-2).png" type="Texture" id=204]
+[ext_resource path="res://Player/Transform/fire (-3).png" type="Texture" id=205]
+[ext_resource path="res://Player/Transform/fire (-4).png" type="Texture" id=206]
+[ext_resource path="res://Player/Transform/fire (-5).png" type="Texture" id=207]
+[ext_resource path="res://Player/Transform/fire (0).png" type="Texture" id=208]
+[ext_resource path="res://Player/Transform/fire (-6).png" type="Texture" id=209]
+[ext_resource path="res://Player/Transform/fire (-7).png" type="Texture" id=210]
+[ext_resource path="res://Player/Transform/fire (-10).png" type="Texture" id=211]
+[ext_resource path="res://Player/Transform/fire (-8).png" type="Texture" id=212]
+[ext_resource path="res://Player/Transform/fire (-9).png" type="Texture" id=213]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
-"loop": true,
-"name": "CleanGrey",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 156 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 152 ) ],
-"loop": true,
-"name": "IdleGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
-"loop": true,
-"name": "FeedGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
-"loop": true,
-"name": "FeedBlack",
+"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 184 ), ExtResource( 187 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 181 ) ],
+"loop": false,
+"name": "FeedFire",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
@@ -212,19 +227,19 @@ animations = [ {
 "name": "FeedBlue",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
 "loop": true,
-"name": "IdleRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Feed",
+"name": "IdleBlack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
-"loop": true,
+"loop": false,
 "name": "CleanBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "IdleRed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 70 ), ExtResource( 68 ), ExtResource( 69 ) ],
@@ -232,14 +247,34 @@ animations = [ {
 "name": "IdleBlue",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "FeedGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
+"loop": true,
+"name": "FeedGrey",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
 "loop": true,
 "name": "CleanRed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "IdleGreen",
+"name": "Clean",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "IdleGrey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "CleanGreen",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 166 ), ExtResource( 157 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 168 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 163 ) ],
@@ -247,44 +282,9 @@ animations = [ {
 "name": "PlayGrey",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
 "loop": true,
-"name": "PlayRed",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
-"loop": true,
-"name": "PlayGreen",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "PlayBlue",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "PlayBlack",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
-"loop": true,
-"name": "CleanGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
-"loop": true,
-"name": "FeedGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "IdleBlack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ) ],
-"loop": true,
-"name": "Clean",
+"name": "FeedBlack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
@@ -295,6 +295,56 @@ animations = [ {
 "frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
 "loop": true,
 "name": "FeedRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "IdleGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "PlayBlack",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Feed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
+"loop": true,
+"name": "PlayGreen",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
+"loop": true,
+"name": "CleanGrey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
+"loop": true,
+"name": "PlayRed",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "PlayBlue",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 211 ) ],
+"loop": true,
+"name": "PlayFire",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
+"loop": true,
+"name": "IdleFire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
+"loop": true,
+"name": "CleanFire",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
@@ -369,11 +419,9 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "CleanGrey"
+animation = "PlayFire"
+frame = 3
 playing = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="feedSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 37 )
