@@ -23,7 +23,9 @@ func _ready():
 func _on_Player_animation_finished():
 	if level < 1:
 		sprite.play("IdleBlack")
-	elif level >= 1:
+	elif level >= 1 and level <2:
+		sprite.play("IdleBlue")
+	else:
 		sprite.play("Idle")
 			
 func feed_increase_level():
@@ -53,19 +55,25 @@ func clean_increase_level():
 func evolve_pet_feed():
 	if level < 1:
 		sprite.play("FeedBlack")
-	elif level >= 1:
+	elif level >= 1 and level <2:
+		sprite.play("FeedBlue")
+	else:
 		sprite.play("Feed")
 
 func evolve_pet_play():
 	if level < 1:
 		sprite.play("PlayBlack")
-	elif level >= 1:
+	elif level >= 1 and level <2:
+		sprite.play("PlayBlue")
+	else:
 		sprite.play("Play")
 		
 func evolve_pet_clean():
 	if level < 1:
 		sprite.play("CleanBlack")
-	elif level >= 1:
+	elif level >= 1 and level <2:
+		sprite.play("CleanBlue")
+	else:
 		sprite.play("Clean")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.

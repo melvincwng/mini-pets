@@ -226,7 +226,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanBlue"
-frame = 4
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
