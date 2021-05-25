@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=2]
+[gd_scene load_steps=167 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -123,6 +123,34 @@
 [ext_resource path="res://Player/Clean/red (3).png" type="Texture" id=121]
 [ext_resource path="res://Player/Clean/red (4).png" type="Texture" id=122]
 [ext_resource path="res://Player/Clean/red (5).png" type="Texture" id=123]
+[ext_resource path="res://Player/Idle/green (3).png" type="Texture" id=124]
+[ext_resource path="res://Player/Idle/green (1).png" type="Texture" id=125]
+[ext_resource path="res://Player/Idle/green (4).png" type="Texture" id=126]
+[ext_resource path="res://Player/Idle/green (2).png" type="Texture" id=127]
+[ext_resource path="res://Player/Idle/green (5).png" type="Texture" id=128]
+[ext_resource path="res://Player/Jump/green (8).png" type="Texture" id=129]
+[ext_resource path="res://Player/Jump/green (11).png" type="Texture" id=130]
+[ext_resource path="res://Player/Jump/green (12).png" type="Texture" id=131]
+[ext_resource path="res://Player/Jump/green (9).png" type="Texture" id=132]
+[ext_resource path="res://Player/Jump/green (10).png" type="Texture" id=133]
+[ext_resource path="res://Player/Jump/green (1).png" type="Texture" id=134]
+[ext_resource path="res://Player/Jump/green (2).png" type="Texture" id=135]
+[ext_resource path="res://Player/Jump/green (3).png" type="Texture" id=136]
+[ext_resource path="res://Player/Jump/green (5).png" type="Texture" id=137]
+[ext_resource path="res://Player/Jump/green (4).png" type="Texture" id=138]
+[ext_resource path="res://Player/Jump/green (6).png" type="Texture" id=139]
+[ext_resource path="res://Player/Jump/green (7).png" type="Texture" id=140]
+[ext_resource path="res://Player/Feed/green (1).png" type="Texture" id=141]
+[ext_resource path="res://Player/Feed/green (2).png" type="Texture" id=142]
+[ext_resource path="res://Player/Feed/green (3).png" type="Texture" id=143]
+[ext_resource path="res://Player/Feed/green (4).png" type="Texture" id=144]
+[ext_resource path="res://Player/Feed/green (5).png" type="Texture" id=145]
+[ext_resource path="res://Player/Clean/green (2).png" type="Texture" id=146]
+[ext_resource path="res://Player/Feed/green (6).png" type="Texture" id=147]
+[ext_resource path="res://Player/Clean/green (4).png" type="Texture" id=148]
+[ext_resource path="res://Player/Clean/green (5).png" type="Texture" id=149]
+[ext_resource path="res://Player/Clean/green (3).png" type="Texture" id=150]
+[ext_resource path="res://Player/Clean/green (1).png" type="Texture" id=151]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -201,6 +229,26 @@ animations = [ {
 "name": "IdleBlue",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "IdleGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "FeedGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
+"loop": true,
+"name": "PlayGreen",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "CleanGreen",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "Play",
@@ -273,8 +321,7 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "CleanRed"
-frame = 3
+animation = "CleanGreen"
 playing = true
 __meta__ = {
 "_edit_lock_": true
