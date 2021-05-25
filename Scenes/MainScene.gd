@@ -29,6 +29,8 @@ func _on_Player_animation_finished():
 		sprite.play("IdleRed")
 	elif level >= 3 and level < 4:
 		sprite.play("IdleGreen")
+	elif level >= 4 and level < 5:
+		sprite.play("IdleGrey")	
 	else:
 		sprite.play("Idle")
 			
@@ -65,6 +67,8 @@ func evolve_pet_feed():
 		sprite.play("FeedRed")
 	elif level >= 3 and level < 4:
 		sprite.play("FeedGreen")
+	elif level >= 4 and level < 5:
+		sprite.play("FeedGrey")
 	else:
 		sprite.play("Feed")
 
@@ -77,6 +81,8 @@ func evolve_pet_play():
 		sprite.play("PlayRed")
 	elif level >= 3 and level < 4:
 		sprite.play("PlayGreen")
+	elif level >= 4 and level < 5:
+		sprite.play("PlayGrey")
 	else:
 		sprite.play("Play")
 		
@@ -89,6 +95,8 @@ func evolve_pet_clean():
 		sprite.play("CleanRed")
 	elif level >= 3 and level < 4:
 		sprite.play("CleanGreen")
+	elif level >= 4 and level < 5:
+		sprite.play("CleanGrey")
 	else:
 		sprite.play("Clean")
 		
