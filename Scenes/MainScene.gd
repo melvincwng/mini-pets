@@ -6,6 +6,7 @@ onready var dateLabel = $Date
 onready var timeLabel = $Time
 onready var dayLabel = $Day
 onready var levelLabel = $Level
+onready var sprite = $Player
 onready var startDay = OS.get_unix_time() # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 
 # Called when the node enters the scene tree for the first time.
@@ -13,24 +14,28 @@ func _ready():
 	Signal.connect("feed_pet", self, "feed_increase_level")
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
-
+	sprite.play("Idle")
+	
 func feed_increase_level():
 	level += 0.25
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	sprite.play("Feed")
 	
 func play_increase_level():
 	level += 0.15
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	sprite.play("Play")
 	
 func clean_increase_level():
 	level += 0.1
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	sprite.play("Clean")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -79,3 +84,5 @@ func _process(delta):
 	dayLabel.add_text(dayString)
 	
 	
+func _on_Player_animation_finished():
+	sprite.play("Idle")
