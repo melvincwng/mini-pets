@@ -52,3 +52,4 @@ func _process(delta):
 	dayLabel.clear()
 	dayLabel.add_text(dayString)
 	
+	
