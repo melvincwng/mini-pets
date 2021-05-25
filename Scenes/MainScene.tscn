@@ -88,6 +88,7 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true

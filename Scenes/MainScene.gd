@@ -10,12 +10,24 @@ onready var startDay = OS.get_unix_time() # need to find a way to store this... 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Signal.connect("feed_pet", self, "increase_level")
-	Signal.connect("play_pet", self, "increase_level")
-	Signal.connect("clean_pet", self, "increase_level")
+	Signal.connect("feed_pet", self, "feed_increase_level")
+	Signal.connect("play_pet", self, "play_increase_level")
+	Signal.connect("clean_pet", self, "clean_increase_level")
 
-func increase_level():
-	level += 0.5
+func feed_increase_level():
+	level += 0.25
+	var levelString = "Level: " + str(level)
+	levelLabel.clear()
+	levelLabel.set_text(levelString)
+	
+func play_increase_level():
+	level += 0.15
+	var levelString = "Level: " + str(level)
+	levelLabel.clear()
+	levelLabel.set_text(levelString)
+	
+func clean_increase_level():
+	level += 0.1
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
