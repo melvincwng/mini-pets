@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Scenes/MainScene.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Back button.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Feed button.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Play button.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/Clean button.gd" type="Script" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -245,6 +247,7 @@ margin_left = 464.0
 margin_top = 536.0
 margin_right = 560.0
 margin_bottom = 584.0
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -268,6 +271,7 @@ margin_left = 592.0
 margin_top = 536.0
 margin_right = 688.0
 margin_bottom = 584.0
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -308,4 +312,6 @@ text = "< Back"
 align = 1
 valign = 1
 [connection signal="pressed" from="Feed button" to="Feed button" method="_on_Feed_button_pressed"]
+[connection signal="pressed" from="Play button" to="Play button" method="_on_Play_button_pressed"]
+[connection signal="pressed" from="Clean button" to="Clean button" method="_on_Clean_button_pressed"]
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
