@@ -332,7 +332,7 @@ animations = [ {
 "name": "PlayBlue",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 211 ) ],
+"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 210 ), ExtResource( 211 ) ],
 "loop": true,
 "name": "PlayFire",
 "speed": 7.5
@@ -420,7 +420,6 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "PlayFire"
-frame = 3
 playing = true
 
 [node name="feedSound" type="AudioStreamPlayer" parent="Player"]
