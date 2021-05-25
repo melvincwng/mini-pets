@@ -88,7 +88,7 @@ autoplay = true
 position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -102,6 +102,7 @@ margin_bottom = 42.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Level: 0"
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
