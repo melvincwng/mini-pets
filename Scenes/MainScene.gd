@@ -1,14 +1,24 @@
 extends Node2D
 
+var level = 0 # need to save this variable
+
 onready var dateLabel = $Date
 onready var timeLabel = $Time
 onready var dayLabel = $Day
-onready var startDay = OS.get_unix_time()
+onready var levelLabel = $Level
+onready var startDay = OS.get_unix_time() # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Signal.connect("feed_pet", self, "increase_level")
+	Signal.connect("play_pet", self, "increase_level")
+	Signal.connect("clean_pet", self, "increase_level")
 
+func increase_level():
+	level += 0.5
+	var levelString = "Level: " + str(level)
+	levelLabel.clear()
+	levelLabel.set_text(levelString)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

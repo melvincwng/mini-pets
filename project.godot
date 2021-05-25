@@ -19,6 +19,10 @@ config/name="Mini Pets"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Signal="*res://Scenes/Signal.gd"
+
 [display]
 
 window/size/height=595
