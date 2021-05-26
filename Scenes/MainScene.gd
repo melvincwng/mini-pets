@@ -1,9 +1,11 @@
 extends Node2D
 
+
 var level = 0 # need to save this variable
 var food_counter = 0
 var mood_counter = 0
 var clean_counter = 0
+
 
 onready var dateLabel = $Date
 onready var timeLabel = $Time
@@ -13,7 +15,11 @@ onready var foodLabel = $Food
 onready var moodLabel = $Mood
 onready var cleanLabel = $Clean
 onready var sprite = $Player
+onready var timer1 = $Timer
+onready var timer2 = $Timer2
+onready var timer3 = $Timer3
 onready var startDay = OS.get_unix_time() # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +27,7 @@ func _ready():
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
+	
 	
 # This is similar to useEffect hook in JS
 # when line 17 aka the transparent slime "Idle" animation ends
@@ -42,6 +49,7 @@ func _on_Player_animation_finished():
 	else:
 		sprite.play("IdleFire")
 			
+			
 func feed_increase_level():
 	$Player/feedSound.play()
 	level += 0.25
@@ -55,6 +63,10 @@ func feed_increase_level():
 	foodLabel.set_text(foodString)
 	
 	evolve_pet_feed()
+	
+	# disable the feed button for 12 hours (43200 seconds) after clicking
+	timer1.start()
+	$"Feed button".disabled = true
 	
 	
 func play_increase_level():
@@ -71,6 +83,10 @@ func play_increase_level():
 	
 	evolve_pet_play()
 	
+	# disable the play button for 12 hours after clicking
+	timer2.start()
+	$"Play button".disabled = true
+	
 func clean_increase_level():
 	$Player/cleanSound.play()
 	level += 0.1
@@ -84,6 +100,11 @@ func clean_increase_level():
 	cleanLabel.set_text(cleanString)
 
 	evolve_pet_clean()
+	
+	#disable the clean button 12 hours after clicking
+	timer3.start()
+	$"Clean button".disabled = true
+	
 	
 func evolve_pet_feed():
 	if level < 1:
@@ -100,6 +121,7 @@ func evolve_pet_feed():
 		sprite.play("Feed")
 	else:
 		sprite.play("FeedFire")
+
 
 func evolve_pet_play():
 	if level < 1:
@@ -132,6 +154,7 @@ func evolve_pet_clean():
 		sprite.play("Clean")
 	else:
 		sprite.play("CleanFire")
+	
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -179,3 +202,14 @@ func _process(delta):
 	dayLabel.clear()
 	dayLabel.add_text(dayString)
 	
+
+func _on_Timer_timeout():
+	$"Feed button".disabled = false
+	
+
+func _on_Timer2_timeout():
+	$"Play button".disabled = false
+
+
+func _on_Timer3_timeout():
+	$"Clean button".disabled = false
