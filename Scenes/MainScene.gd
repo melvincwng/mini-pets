@@ -45,7 +45,7 @@ func _on_Player_animation_finished():
 func feed_increase_level():
 	$Player/feedSound.play()
 	level += 0.25
-	var levelString = "Level: " + str(level)
+	var levelString = "Level: " + str(level) + " #"
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
 	
@@ -60,7 +60,7 @@ func feed_increase_level():
 func play_increase_level():
 	$Player/playSound.play()
 	level += 0.15
-	var levelString = "Level: " + str(level)
+	var levelString = "Level: " + str(level) + " #"
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
 	
@@ -74,7 +74,7 @@ func play_increase_level():
 func clean_increase_level():
 	$Player/cleanSound.play()
 	level += 0.1
-	var levelString = "Level: " + str(level)
+	var levelString = "Level: " + str(level) + " #"
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
 	
