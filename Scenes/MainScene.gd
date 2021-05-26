@@ -155,9 +155,22 @@ func evolve_pet_clean():
 	else:
 		sprite.play("CleanFire")
 	
-		
+
+func every_game_tick_increase_level():
+	level += 0.00000001
+	var levelString = "Level: " + str(level) + " #"
+	levelLabel.clear()
+	levelLabel.set_text(levelString)
+			
+			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	# Every game-tick where the player is in the game, 
+	# this every_game_tick_increase_level() function will be called
+	# which increases the player's level by a minute amount
+	every_game_tick_increase_level() 
+	
 	# To setup the Date & Time clocks
 	var timeDict = OS.get_datetime()
 	var second = str(timeDict.second)
