@@ -1,11 +1,17 @@
 extends Node2D
 
 var level = 0 # need to save this variable
+var food_counter = 0
+var mood_counter = 0
+var clean_counter = 0
 
 onready var dateLabel = $Date
 onready var timeLabel = $Time
 onready var dayLabel = $Day
 onready var levelLabel = $Level
+onready var foodLabel = $Food
+onready var moodLabel = $Mood
+onready var cleanLabel = $Clean
 onready var sprite = $Player
 onready var startDay = OS.get_unix_time() # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 
@@ -42,7 +48,14 @@ func feed_increase_level():
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	
+	food_counter += 1
+	var foodString = "Food Counter: " + str(food_counter)
+	foodLabel.clear()
+	foodLabel.set_text(foodString)
+	
 	evolve_pet_feed()
+	
 	
 func play_increase_level():
 	$Player/playSound.play()
@@ -50,6 +63,12 @@ func play_increase_level():
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	
+	mood_counter += 1
+	var moodString = "Mood Counter: " + str(mood_counter)
+	moodLabel.clear()
+	moodLabel.set_text(moodString)
+	
 	evolve_pet_play()
 	
 func clean_increase_level():
@@ -58,6 +77,12 @@ func clean_increase_level():
 	var levelString = "Level: " + str(level)
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
+	
+	clean_counter += 1
+	var cleanString = "Clean Counter: " + str(clean_counter)
+	cleanLabel.clear()
+	cleanLabel.set_text(cleanString)
+
 	evolve_pet_clean()
 	
 func evolve_pet_feed():
