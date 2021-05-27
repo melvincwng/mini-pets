@@ -102,159 +102,149 @@ autoplay = true
 
 [node name="Label" type="Label" parent="."]
 margin_left = 88.0
-margin_top = 128.0
+margin_top = 232.0
 margin_right = 937.0
-margin_bottom = 154.0
+margin_bottom = 258.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Your pet will evolve automically upon reaching certain levels:"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 200.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 240.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 296.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 336.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label4" type="Label" parent="."]
 margin_left = 392.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 432.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label5" type="Label" parent="."]
 margin_left = 488.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 528.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label6" type="Label" parent="."]
 margin_left = 584.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 624.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label7" type="Label" parent="."]
 margin_left = 680.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 720.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label8" type="Label" parent="."]
 margin_left = 784.0
-margin_top = 232.0
+margin_top = 288.0
 margin_right = 824.0
-margin_bottom = 258.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "or"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label9" type="Label" parent="."]
 margin_left = 720.0
-margin_top = 255.75
+margin_top = 311.75
 margin_right = 786.0
-margin_bottom = 269.75
+margin_bottom = 325.75
 custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 text = "Chance: 99%"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label10" type="Label" parent="."]
 margin_left = 816.0
-margin_top = 255.75
+margin_top = 311.75
 margin_right = 882.0
-margin_bottom = 269.75
+margin_bottom = 325.75
 custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 text = "Chance: 1%"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Command Text" type="Label" parent="."]
 margin_left = 192.0
-margin_top = 328.0
+margin_top = 336.0
 margin_right = 833.0
-margin_bottom = 368.0
+margin_bottom = 376.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Commands to view animations: feed, play, clean"
@@ -266,9 +256,9 @@ __meta__ = {
 
 [node name="Back button" type="Button" parent="."]
 margin_left = 456.0
-margin_top = 432.0
+margin_top = 384.0
 margin_right = 552.0
-margin_bottom = 472.0
+margin_bottom = 424.0
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
@@ -278,8 +268,9 @@ __meta__ = {
 }
 
 [node name="Back Text" type="Label" parent="Back button"]
+margin_top = 16.0
 margin_right = 96.0
-margin_bottom = 40.0
+margin_bottom = 56.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
@@ -305,6 +296,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -314,7 +306,7 @@ __meta__ = {
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -324,7 +316,7 @@ __meta__ = {
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 3
+frame = 2
 playing = true
 flip_h = true
 __meta__ = {
@@ -353,66 +345,42 @@ __meta__ = {
 }
 
 [node name="black (1)" type="Sprite" parent="."]
-position = Vector2( 176, 224 )
+position = Vector2( 176, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 34 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="blue (1)" type="Sprite" parent="."]
-position = Vector2( 272, 224 )
+position = Vector2( 272, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 29 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="red (1)" type="Sprite" parent="."]
-position = Vector2( 368, 224 )
+position = Vector2( 368, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 31 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="green (1)" type="Sprite" parent="."]
-position = Vector2( 464, 224 )
+position = Vector2( 464, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 30 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="grey (1)" type="Sprite" parent="."]
-position = Vector2( 560, 224 )
+position = Vector2( 560, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 33 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="transparent (1)" type="Sprite" parent="."]
-position = Vector2( 656, 224.125 )
+position = Vector2( 656, 280.125 )
 scale = Vector2( 2, 1.99219 )
 texture = ExtResource( 24 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="metal (1)" type="Sprite" parent="."]
-position = Vector2( 752, 224 )
+position = Vector2( 752, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="fire (1)" type="Sprite" parent="."]
-position = Vector2( 848, 224 )
+position = Vector2( 848, 280 )
 scale = Vector2( 1.68421, 2.04839 )
 texture = ExtResource( 32 )
-__meta__ = {
-"_edit_lock_": true
-}
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
