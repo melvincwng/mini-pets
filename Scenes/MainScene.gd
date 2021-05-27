@@ -8,6 +8,7 @@ var clean_counter = 0
 #need to be able to save this random_number so that the system can remember if the player has a chance to transform into the rare fire slime
 var random_number = random_number_generator() if random_number == null else random_number
 
+
 onready var dateLabel = $Date
 onready var timeLabel = $Time
 onready var dayLabel = $Day
@@ -70,8 +71,8 @@ func feed_increase_level():
 	evolve_pet_feed()
 	
 	# disable the feed button for 12 hours (43200 seconds) after clicking
-	#timer1.start()
-	#$"Feed button".disabled = true
+	timer1.start()
+	$"Feed button".disabled = true
 	
 	
 func play_increase_level():
@@ -89,8 +90,8 @@ func play_increase_level():
 	evolve_pet_play()
 	
 	# disable the play button for 12 hours after clicking
-	#timer2.start()
-	#$"Play button".disabled = true
+	timer2.start()
+	$"Play button".disabled = true
 	
 func clean_increase_level():
 	$Player/cleanSound.play()
@@ -107,8 +108,8 @@ func clean_increase_level():
 	evolve_pet_clean()
 	
 	#disable the clean button 12 hours after clicking
-	#timer3.start()
-	#$"Clean button".disabled = true
+	timer3.start()
+	$"Clean button".disabled = true
 	
 	
 func evolve_pet_feed():
@@ -125,7 +126,6 @@ func evolve_pet_feed():
 	elif level >= 5 and level < 6:
 		sprite.play("Feed")
 	else:
-		#sprite.play("FeedFire")
 		if random_number == 88:
 			sprite.play("FeedFire")
 		else:
@@ -146,7 +146,6 @@ func evolve_pet_play():
 	elif level >= 5 and level < 6:
 		sprite.play("Play")
 	else:
-		#sprite.play("PlayFire")
 		if random_number == 88:
 			sprite.play("PlayFire")
 		else:
@@ -166,7 +165,6 @@ func evolve_pet_clean():
 	elif level >= 5 and level < 6:
 		sprite.play("Clean")
 	else:
-		#sprite.play("CleanFire")
 		if random_number == 88:
 			sprite.play("CleanFire")
 		else:
@@ -251,3 +249,70 @@ func _on_Timer2_timeout():
 
 func _on_Timer3_timeout():
 	$"Clean button".disabled = false
+
+func reset_all_counters(): 
+	food_counter = 0
+	mood_counter = 0
+	clean_counter = 0
+	
+	foodLabel.clear()
+	moodLabel.clear()
+	cleanLabel.clear()
+	
+	foodLabel.set_text("Food Counter: " + str(food_counter))
+	moodLabel.set_text("Mood Counter: " + str(mood_counter))
+	cleanLabel.set_text("Clean Counter: " + str(clean_counter))
+	
+	
+func _on_Input_text_entered(new_text):
+	if new_text == 'change_black_slime()':
+		level = 0.4
+	elif new_text == 'change_blue_slime()':
+		level = 1.4
+	elif new_text == 'change_red_slime()':
+		level = 2.4
+	elif new_text == 'change_green_slime()':
+		level = 3.4
+	elif new_text == 'change_grey_slime()':
+		level = 4.4
+	elif new_text == 'change_transparent_slime()':
+		level = 5.4
+	elif new_text == 'change_metal_slime()':
+		level = 6.4
+		random_number = 1
+	elif new_text == 'change_fire_slime()':
+		level = 6.4
+		random_number = 88
+	elif new_text == 'increase_level()':
+		level += 30
+	elif new_text == 'increase_food()':
+		food_counter += 10
+		feed_increase_level()
+		timer1.stop()
+		$"Feed button".disabled = false
+	elif new_text == 'increase_mood()':
+		mood_counter += 10
+		play_increase_level()
+		timer2.stop()
+		$"Play button".disabled = false
+	elif new_text == 'increase_clean()':
+		clean_counter += 10
+		clean_increase_level()
+		timer3.stop()
+		$"Clean button".disabled = false
+	elif new_text == 'reset_all()':
+		level = 0
+		
+		reset_all_counters()
+		
+		$"Feed button".disabled = false
+		$"Play button".disabled = false
+		$"Clean button".disabled = false
+	elif new_text == 'reset_buttons()':
+		$"Feed button".disabled = false
+		$"Play button".disabled = false
+		$"Clean button".disabled = false
+		
+		
+		
+	
