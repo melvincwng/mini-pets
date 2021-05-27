@@ -371,7 +371,7 @@ animations = [ {
 "frames": [ ExtResource( 225 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 227 ), ExtResource( 229 ) ],
 "loop": true,
 "name": "FeedMetal",
-"speed": 10.0
+"speed": 7.5
 }, {
 "frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
 "loop": true,
@@ -470,7 +470,6 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 2
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
