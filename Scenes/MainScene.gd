@@ -1,11 +1,12 @@
 extends Node2D
 
-
-var level = 0 # need to save this variable
+# need to save these variables
+var level = 0
 var food_counter = 0
 var mood_counter = 0
 var clean_counter = 0
-
+#need to be able to save this random_number so that the system can remember if the player has a chance to transform into the rare fire slime
+var random_number = random_number_generator()
 
 onready var dateLabel = $Date
 onready var timeLabel = $Time
@@ -27,6 +28,7 @@ func _ready():
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
+	print(random_number)
 	
 	
 # This is similar to useEffect hook in JS
@@ -47,7 +49,10 @@ func _on_Player_animation_finished():
 	elif level >= 5 and level < 6:
 		sprite.play("Idle")
 	else:
-		sprite.play("IdleFire")
+		if random_number == 88:
+			sprite.play("IdleFire")
+		else:
+			sprite.play("IdleMetal")
 			
 			
 func feed_increase_level():
@@ -65,8 +70,8 @@ func feed_increase_level():
 	evolve_pet_feed()
 	
 	# disable the feed button for 12 hours (43200 seconds) after clicking
-	timer1.start()
-	$"Feed button".disabled = true
+	#timer1.start()
+	#$"Feed button".disabled = true
 	
 	
 func play_increase_level():
@@ -84,8 +89,8 @@ func play_increase_level():
 	evolve_pet_play()
 	
 	# disable the play button for 12 hours after clicking
-	timer2.start()
-	$"Play button".disabled = true
+	#timer2.start()
+	#$"Play button".disabled = true
 	
 func clean_increase_level():
 	$Player/cleanSound.play()
@@ -102,8 +107,8 @@ func clean_increase_level():
 	evolve_pet_clean()
 	
 	#disable the clean button 12 hours after clicking
-	timer3.start()
-	$"Clean button".disabled = true
+	#timer3.start()
+	#$"Clean button".disabled = true
 	
 	
 func evolve_pet_feed():
@@ -120,7 +125,11 @@ func evolve_pet_feed():
 	elif level >= 5 and level < 6:
 		sprite.play("Feed")
 	else:
-		sprite.play("FeedFire")
+		#sprite.play("FeedFire")
+		if random_number == 88:
+			sprite.play("FeedFire")
+		else:
+			sprite.play("FeedMetal")
 
 
 func evolve_pet_play():
@@ -137,7 +146,11 @@ func evolve_pet_play():
 	elif level >= 5 and level < 6:
 		sprite.play("Play")
 	else:
-		sprite.play("PlayFire")
+		#sprite.play("PlayFire")
+		if random_number == 88:
+			sprite.play("PlayFire")
+		else:
+			sprite.play("PlayMetal")
 		
 func evolve_pet_clean():
 	if level < 1:
@@ -153,8 +166,20 @@ func evolve_pet_clean():
 	elif level >= 5 and level < 6:
 		sprite.play("Clean")
 	else:
-		sprite.play("CleanFire")
+		#sprite.play("CleanFire")
+		if random_number == 88:
+			sprite.play("CleanFire")
+		else:
+			sprite.play("CleanMetal")
 	
+	
+func random_number_generator():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var random_number = rng.randi_range(1, 100)
+	return random_number
+	
+
 
 func every_game_tick_increase_level():
 	level += 0.00000001
