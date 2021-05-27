@@ -28,7 +28,7 @@ func _ready():
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
-	print(random_number)
+	#print(random_number)
 	
 	
 # This is similar to useEffect hook in JS
