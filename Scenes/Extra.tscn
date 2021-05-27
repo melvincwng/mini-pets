@@ -56,7 +56,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -111,6 +111,7 @@ text = "Your pet will evolve automically upon reaching certain levels:"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -125,6 +126,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -139,6 +141,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -153,6 +156,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -167,6 +171,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -181,6 +186,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -195,6 +201,7 @@ text = ">"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -209,6 +216,7 @@ text = "or"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -223,6 +231,7 @@ text = "Chance: 99%"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -237,6 +246,7 @@ text = "Chance: 1%"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -251,6 +261,7 @@ text = "Commands to view animations: feed, play, clean"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -261,9 +272,10 @@ margin_right = 552.0
 margin_bottom = 440.0
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/normal = SubResource( 10 )
 script = ExtResource( 4 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -284,7 +296,6 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 5
 playing = true
 flip_h = true
 __meta__ = {
@@ -295,7 +306,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 4
+frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -347,39 +358,63 @@ __meta__ = {
 position = Vector2( 176, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 34 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="blue (1)" type="Sprite" parent="."]
 position = Vector2( 272, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="red (1)" type="Sprite" parent="."]
 position = Vector2( 368, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 31 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="green (1)" type="Sprite" parent="."]
 position = Vector2( 464, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 30 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="grey (1)" type="Sprite" parent="."]
 position = Vector2( 560, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 33 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="transparent (1)" type="Sprite" parent="."]
 position = Vector2( 656, 280.125 )
 scale = Vector2( 2, 1.99219 )
 texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="metal (1)" type="Sprite" parent="."]
 position = Vector2( 752, 280 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="fire (1)" type="Sprite" parent="."]
 position = Vector2( 848, 280 )
 scale = Vector2( 1.68421, 2.04839 )
 texture = ExtResource( 32 )
+__meta__ = {
+"_edit_lock_": true
+}
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
