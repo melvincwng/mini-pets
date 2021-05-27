@@ -265,6 +265,7 @@ func reset_all_counters():
 	
 	
 func _on_Input_text_entered(new_text):
+	# Developer cheat codes
 	if new_text == 'change_black_slime()':
 		level = 0.4
 	elif new_text == 'change_blue_slime()':
@@ -312,6 +313,20 @@ func _on_Input_text_entered(new_text):
 		$"Feed button".disabled = false
 		$"Play button".disabled = false
 		$"Clean button".disabled = false
+		
+	# Normal commands
+	elif new_text == 'feed':
+		$Player/feedSound.play()
+		evolve_pet_feed()
+	elif new_text == 'play':
+		$Player/playSound.play()
+		evolve_pet_play()
+	elif new_text == 'clean':
+		$Player/cleanSound.play()
+		evolve_pet_clean()
+	else:
+		pass
+		
 		
 		
 		
