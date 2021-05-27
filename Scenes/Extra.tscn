@@ -48,15 +48,15 @@ font_path = "res://Font/VCR_OSD_MONO_1.001.ttf"
 size = 10
 font_data = SubResource( 5 )
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="DynamicFont" id=10]
-size = 25
-font_data = ExtResource( 3 )
+[sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -250,14 +250,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Command Text" type="Label" parent="."]
+margin_left = 192.0
+margin_top = 336.0
+margin_right = 833.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Commands to view animations: feed, play, clean"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Back button" type="Button" parent="."]
 margin_left = 456.0
-margin_top = 328.0
+margin_top = 432.0
 margin_right = 552.0
-margin_bottom = 368.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/normal = SubResource( 9 )
+margin_bottom = 472.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -266,7 +281,7 @@ __meta__ = {
 [node name="Back Text" type="Label" parent="Back button"]
 margin_right = 96.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
 align = 1
@@ -280,7 +295,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 6
+frame = 4
 playing = true
 flip_h = true
 __meta__ = {
@@ -291,7 +306,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 2
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
