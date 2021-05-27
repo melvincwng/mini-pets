@@ -56,7 +56,7 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxEmpty" id=14]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -256,21 +256,20 @@ __meta__ = {
 
 [node name="Back button" type="Button" parent="."]
 margin_left = 456.0
-margin_top = 384.0
+margin_top = 400.0
 margin_right = 552.0
-margin_bottom = 424.0
+margin_bottom = 440.0
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 14 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Back Text" type="Label" parent="Back button"]
-margin_top = 16.0
 margin_right = 96.0
-margin_bottom = 56.0
+margin_bottom = 40.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
@@ -285,7 +284,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 1
+frame = 5
 playing = true
 flip_h = true
 __meta__ = {
@@ -296,7 +295,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 1
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
