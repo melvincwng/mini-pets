@@ -6,7 +6,7 @@ var food_counter = 0
 var mood_counter = 0
 var clean_counter = 0
 #need to be able to save this random_number so that the system can remember if the player has a chance to transform into the rare fire slime
-var random_number = random_number_generator()
+var random_number = random_number_generator() if random_number == null else random_number
 
 onready var dateLabel = $Date
 onready var timeLabel = $Time
