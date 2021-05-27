@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/metal (6).png-2ebaa096a35ad327c8cba56941d1a202.stex"
+path="res://.import/metal (7).png-873eff68104f3f45d78cefcf915e4ef3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Idle/metal (6).png"
-dest_files=[ "res://.import/metal (6).png-2ebaa096a35ad327c8cba56941d1a202.stex" ]
+source_file="res://Player/Feed/metal (7).png"
+dest_files=[ "res://.import/metal (7).png-873eff68104f3f45d78cefcf915e4ef3.stex" ]
 
 [params]
 

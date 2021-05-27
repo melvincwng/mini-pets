@@ -1,25 +1,25 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Background/farm.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Font/yoster-island.regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/Back button.gd" type="Script" id=4]
 [ext_resource path="res://Player/Idle/metal (1).png" type="Texture" id=5]
-[ext_resource path="res://Player/Idle/metal (2).png" type="Texture" id=6]
-[ext_resource path="res://Player/Idle/metal (6).png" type="Texture" id=7]
-[ext_resource path="res://Player/Idle/metal (7).png" type="Texture" id=8]
-[ext_resource path="res://Player/Idle/metal (5).png" type="Texture" id=9]
-[ext_resource path="res://Player/Idle/metal (4).png" type="Texture" id=10]
-[ext_resource path="res://Player/Idle/metal (3).png" type="Texture" id=11]
-[ext_resource path="res://Player/Jump/metal (6).png" type="Texture" id=12]
-[ext_resource path="res://Player/Jump/metal (7).png" type="Texture" id=13]
-[ext_resource path="res://Player/Jump/metal (1).png" type="Texture" id=14]
-[ext_resource path="res://Player/Jump/metal (2).png" type="Texture" id=15]
-[ext_resource path="res://Player/Jump/metal (5).png" type="Texture" id=16]
-[ext_resource path="res://Player/Jump/metal (9).png" type="Texture" id=17]
-[ext_resource path="res://Player/Jump/metal (3).png" type="Texture" id=18]
-[ext_resource path="res://Player/Jump/metal (4).png" type="Texture" id=19]
-[ext_resource path="res://Player/Jump/metal (8).png" type="Texture" id=20]
+[ext_resource path="res://Player/Feed/metal (2).png" type="Texture" id=6]
+[ext_resource path="res://Player/Feed/metal (3).png" type="Texture" id=7]
+[ext_resource path="res://Player/Feed/metal (1).png" type="Texture" id=8]
+[ext_resource path="res://Player/Feed/metal (6).png" type="Texture" id=9]
+[ext_resource path="res://Player/Feed/metal (4).png" type="Texture" id=10]
+[ext_resource path="res://Player/Feed/metal (5).png" type="Texture" id=11]
+[ext_resource path="res://Player/Idle/Jump/metal (6).png" type="Texture" id=12]
+[ext_resource path="res://Player/Idle/Jump/metal (7).png" type="Texture" id=13]
+[ext_resource path="res://Player/Idle/Jump/metal (1).png" type="Texture" id=14]
+[ext_resource path="res://Player/Idle/Jump/metal (2).png" type="Texture" id=15]
+[ext_resource path="res://Player/Idle/Jump/metal (5).png" type="Texture" id=16]
+[ext_resource path="res://Player/Idle/Jump/metal (9).png" type="Texture" id=17]
+[ext_resource path="res://Player/Idle/Jump/metal (3).png" type="Texture" id=18]
+[ext_resource path="res://Player/Idle/Jump/metal (4).png" type="Texture" id=19]
+[ext_resource path="res://Player/Idle/Jump/metal (8).png" type="Texture" id=20]
 [ext_resource path="res://Food/Shrimp.png" type="Texture" id=21]
 [ext_resource path="res://Food/Steak.png" type="Texture" id=22]
 [ext_resource path="res://Food/Waffles.png" type="Texture" id=23]
@@ -34,6 +34,8 @@
 [ext_resource path="res://Player/Idle/fire (1).png" type="Texture" id=32]
 [ext_resource path="res://Player/Idle/grey (1).png" type="Texture" id=33]
 [ext_resource path="res://Player/Idle/black (1).png" type="Texture" id=34]
+[ext_resource path="res://Player/Feed/metal (7).png" type="Texture" id=35]
+
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Font/yoster-island.regular.ttf"
@@ -42,39 +44,39 @@ font_path = "res://Font/yoster-island.regular.ttf"
 size = 25
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=10]
+[sub_resource type="DynamicFontData" id=3]
 font_path = "res://Font/yoster-island.regular.ttf"
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=4]
 size = 23
-font_data = SubResource( 10 )
+font_data = SubResource( 3 )
 
-[sub_resource type="DynamicFontData" id=14]
+[sub_resource type="DynamicFontData" id=5]
 font_path = "res://Font/VCR_OSD_MONO_1.001.ttf"
 
-[sub_resource type="DynamicFont" id=13]
-size = 10
-font_data = SubResource( 14 )
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
 [sub_resource type="DynamicFont" id=6]
+size = 10
+font_data = SubResource( 5 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="DynamicFont" id=10]
 size = 25
 font_data = ExtResource( 3 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 20 ), ExtResource( 17 ) ],
 "loop": true,
@@ -82,7 +84,7 @@ animations = [ {
 "speed": 7.5
 } ]
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=13]
 animations = [ {
 "frames": [ ExtResource( 24 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
@@ -128,7 +130,7 @@ margin_left = 200.0
 margin_top = 232.0
 margin_right = 240.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -143,7 +145,7 @@ margin_left = 296.0
 margin_top = 232.0
 margin_right = 336.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -158,7 +160,7 @@ margin_left = 392.0
 margin_top = 232.0
 margin_right = 432.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -173,7 +175,7 @@ margin_left = 488.0
 margin_top = 232.0
 margin_right = 528.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -188,7 +190,7 @@ margin_left = 584.0
 margin_top = 232.0
 margin_right = 624.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -203,7 +205,7 @@ margin_left = 680.0
 margin_top = 232.0
 margin_right = 720.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = ">"
 align = 1
@@ -218,7 +220,7 @@ margin_left = 784.0
 margin_top = 232.0
 margin_right = 824.0
 margin_bottom = 258.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "or"
 align = 1
@@ -233,7 +235,7 @@ margin_left = 720.0
 margin_top = 255.75
 margin_right = 786.0
 margin_bottom = 269.75
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Chance: 99%"
 align = 1
@@ -248,7 +250,7 @@ margin_left = 816.0
 margin_top = 255.75
 margin_right = 882.0
 margin_bottom = 269.75
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Chance: 1%"
 align = 1
@@ -263,9 +265,9 @@ margin_left = 456.0
 margin_top = 328.0
 margin_right = 552.0
 margin_bottom = 368.0
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -274,7 +276,7 @@ __meta__ = {
 [node name="Back Text" type="Label" parent="Back button"]
 margin_right = 96.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "< Back"
 align = 1
@@ -286,9 +288,9 @@ __meta__ = {
 [node name="metalSlime1" type="AnimatedSprite" parent="."]
 position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 7 )
+frames = SubResource( 11 )
 animation = "Idle"
-frame = 4
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -298,7 +300,8 @@ __meta__ = {
 [node name="metalSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 8 )
+frames = SubResource( 12 )
+frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -307,8 +310,8 @@ __meta__ = {
 [node name="transparentSlime" type="AnimatedSprite" parent="."]
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 9 )
-frame = 3
+frames = SubResource( 13 )
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -317,8 +320,8 @@ __meta__ = {
 [node name="transparentSlime2" type="AnimatedSprite" parent="."]
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 9 )
-frame = 2
+frames = SubResource( 13 )
+frame = 3
 playing = true
 flip_h = true
 __meta__ = {
