@@ -252,16 +252,15 @@ __meta__ = {
 
 [node name="Command Text" type="Label" parent="."]
 margin_left = 192.0
-margin_top = 336.0
+margin_top = 328.0
 margin_right = 833.0
-margin_bottom = 376.0
+margin_bottom = 368.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Commands to view animations: feed, play, clean"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -295,7 +294,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 4
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -306,7 +305,6 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
