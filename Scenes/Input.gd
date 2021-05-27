@@ -1,15 +1,13 @@
 extends LineEdit
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	# when the line-edit node loads, it will automatically allow us to type
-	grab_focus()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+	pass
+	# when the line-edit node loads, using grab_focus() will automatically focus on the line-edit node
+	# hence allowing users to type immediately
+	# but I removed/commented it 
+	# cause in mobile phones, it will automatically open the keyboard panel (distracting)
+	# Hence, now users can type still but only if they click the line-edit node area
+	# grab_focus()
 
 func _on_Input_text_entered(new_text):
 	clear()

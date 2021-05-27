@@ -101,17 +101,16 @@ volume_db = -15.0
 autoplay = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 88.0
+margin_left = 72.0
 margin_top = 232.0
-margin_right = 937.0
+margin_right = 953.0
 margin_bottom = 258.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Your pet will evolve automically upon reaching certain levels:"
+text = "Your pet will evolve automatically upon reaching certain levels:"
 align = 1
 valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -296,6 +295,7 @@ position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
+frame = 4
 playing = true
 flip_h = true
 __meta__ = {
@@ -306,7 +306,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 5
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -316,7 +316,6 @@ __meta__ = {
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -326,7 +325,7 @@ __meta__ = {
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 2
+frame = 4
 playing = true
 flip_h = true
 __meta__ = {
