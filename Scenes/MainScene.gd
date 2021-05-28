@@ -9,6 +9,7 @@ var clean_counter = 0
 var random_number = random_number_generator() if random_number == null else random_number
 # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 var startDay = OS.get_unix_time() if startDay == null else startDay
+var gameData_file = "user://gameData.save"
 
 
 onready var dateLabel = $Date
@@ -32,7 +33,26 @@ func _ready():
 	sprite.play("IdleBlack")
 	#print(random_number)
 	#print(startDay)
+	load_data()
 	
+	
+func save_data():
+	var file = File.new()
+	file.open(gameData_file, File.WRITE)
+	file.store_var(level)
+	file.close()
+	
+	
+	
+func load_data():
+	var file = File.new()
+	if file.file_exists(gameData_file):
+		file.open(gameData_file, File.READ)
+		level = file.get_var()
+		file.close()
+	else:
+		level = 0
+		
 	
 # This is similar to useEffect hook in JS
 # when line 17 aka the transparent slime "Idle" animation ends
@@ -190,7 +210,6 @@ func every_game_tick_increase_level():
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	# Every game-tick where the player is in the game, 
 	# this every_game_tick_increase_level() function will be called
 	# which increases the player's level by a minute amount
@@ -329,8 +348,9 @@ func _on_Input_text_entered(new_text):
 		evolve_pet_clean()
 	else:
 		pass
+				
 		
-		
-		
-		
-	
+func _on_Save_button_pressed():
+	save_data()
+	$ConfirmationDialog.popup_centered()
+	$ConfirmationDialog/save.play()

@@ -97,7 +97,6 @@ __meta__ = {
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = -15.0
 autoplay = true
 
 [node name="Top Label" type="Label" parent="."]
@@ -166,7 +165,7 @@ position = Vector2( 72, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 11
+frame = 14
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -177,7 +176,7 @@ position = Vector2( 952, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 8 )
 animation = "Idle"
-frame = 2
+frame = 11
 playing = true
 flip_h = true
 __meta__ = {
@@ -189,7 +188,7 @@ position = Vector2( 416, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 9 )
 animation = "Jump"
-frame = 8
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -200,7 +199,7 @@ position = Vector2( 624, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 9 )
 animation = "Jump"
-frame = 8
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
