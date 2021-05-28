@@ -498,7 +498,6 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 4
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -764,7 +763,6 @@ margin_right = 200.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 200, 70 )
 window_title = ""
-dialog_text = "Game saved!"
 
 [node name="save" type="AudioStreamPlayer" parent="ConfirmationDialog"]
 stream = ExtResource( 243 )

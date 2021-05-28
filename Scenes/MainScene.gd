@@ -369,7 +369,12 @@ func _on_Input_text_entered(new_text):
 		$"Feed button".disabled = false
 		$"Play button".disabled = false
 		$"Clean button".disabled = false
-	
+	elif new_text == 'check_random_number()':
+		$ConfirmationDialog.dialog_text = str(random_number)
+		$ConfirmationDialog.popup_centered()
+	elif new_text == 'check_unix_timestamp()':
+		$ConfirmationDialog.dialog_text = str(startDay)
+		$ConfirmationDialog.popup_centered()
 		
 	# Normal commands
 	elif new_text == 'feed':
@@ -387,5 +392,6 @@ func _on_Input_text_entered(new_text):
 		
 func _on_Save_button_pressed():
 	save_data()
+	$ConfirmationDialog.dialog_text = "Game saved!"
 	$ConfirmationDialog.popup_centered()
 	$ConfirmationDialog/save.play()
