@@ -10,6 +10,9 @@ var random_number
 # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 var startDay
 var gameData_file = "user://gameData.save"
+var clickFeedButtonTime
+var clickPlayButtonTime
+var clickCleanButtonTime
 
 
 onready var dateLabel = $Date
@@ -32,8 +35,6 @@ func _ready():
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
 	load_data()
-	#print(random_number)
-	#print(startDay)
 	
 	
 func save_data():
@@ -45,6 +46,9 @@ func save_data():
 	file.store_var(clean_counter)
 	file.store_var(random_number)
 	file.store_var(startDay)
+	file.store_var(clickFeedButtonTime)
+	file.store_var(clickPlayButtonTime)
+	file.store_var(clickCleanButtonTime)
 	file.close()
 	
 	
@@ -59,6 +63,9 @@ func load_data():
 		clean_counter = file.get_var()
 		random_number = file.get_var()
 		startDay = file.get_var()
+		clickFeedButtonTime = file.get_var()
+		clickPlayButtonTime = file.get_var()
+		clickCleanButtonTime = file.get_var()
 		file.close()
 	else:
 		level = 0
@@ -70,7 +77,7 @@ func load_data():
 		
 		
 # This is similar to useEffect hook in JS
-# when line 17 aka the transparent slime "Idle" animation ends
+# when line 90+ aka the transparent slime "Idle" animation ends
 # this function func _on_Player_animation_finished() will automatically run
 # to play the correct animated slime based on the level of the player	
 func _on_Player_animation_finished():
@@ -107,9 +114,10 @@ func feed_increase_level():
 	
 	evolve_pet_feed()
 	
-	# disable the feed button for 12 hours (43200 seconds) after clicking
-	timer1.start()
+	# disable the feed button for 8 hours (28800 seconds) after clicking
+	clickFeedButtonTime = OS.get_unix_time()
 	$"Feed button".disabled = true
+	
 	
 	
 func play_increase_level():
@@ -126,9 +134,10 @@ func play_increase_level():
 	
 	evolve_pet_play()
 	
-	# disable the play button for 12 hours after clicking
-	timer2.start()
+	# disable the play button for 8 hours after clicking
+	clickPlayButtonTime = OS.get_unix_time()
 	$"Play button".disabled = true
+	
 	
 func clean_increase_level():
 	$Player/cleanSound.play()
@@ -144,8 +153,8 @@ func clean_increase_level():
 
 	evolve_pet_clean()
 	
-	#disable the clean button 12 hours after clicking
-	timer3.start()
+	#disable the clean button 8 hours after clicking
+	clickCleanButtonTime = OS.get_unix_time()
 	$"Clean button".disabled = true
 	
 	
@@ -188,6 +197,7 @@ func evolve_pet_play():
 		else:
 			sprite.play("PlayMetal")
 		
+		
 func evolve_pet_clean():
 	if level < 30:
 		sprite.play("CleanBlack")
@@ -215,7 +225,6 @@ func random_number_generator():
 	return random_number
 	
 
-
 func every_game_tick_increase_level():
 	level += 0.00000001
 	var levelString = "Level: " + str(level) + " #"
@@ -239,9 +248,43 @@ func every_game_tick_check_clean():
 	var cleanString = "Clean Counter: " + str(clean_counter)
 	cleanLabel.clear()
 	cleanLabel.set_text(cleanString)
+	
+
+func check_feed_button_reset():
+	if clickFeedButtonTime	== null:
+		$"Feed button".disabled = false
+	else:
+		var currentTime = OS.get_unix_time()
+		if currentTime - clickFeedButtonTime >= 60:
+			$"Feed button".disabled = false
+		else:
+			$"Feed button".disabled = true
+			
+			
+func check_play_button_reset():
+	if clickPlayButtonTime	== null:
+		$"Play button".disabled = false
+	else:
+		var currentTime = OS.get_unix_time()
+		if currentTime - clickPlayButtonTime >= 60:
+			$"Play button".disabled = false
+		else:
+			$"Play button".disabled = true
+			
+			
+func check_clean_button_reset():
+	if clickCleanButtonTime	== null:
+		$"Clean button".disabled = false
+	else:
+		var currentTime = OS.get_unix_time()
+		if currentTime - clickCleanButtonTime >= 60:
+			$"Clean button".disabled = false
+		else:
+			$"Clean button".disabled = true		
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	# Every game-tick where the player is in the game, 
 	# this every_game_tick_increase_level() function will be called
 	# which increases the player's level by a minute amount
@@ -250,6 +293,11 @@ func _process(delta):
 	every_game_tick_check_mood()
 	every_game_tick_check_clean()
 	
+	# For feed, play, clean button -> reset every 8 hours
+	check_feed_button_reset()
+	check_play_button_reset()
+	check_clean_button_reset()
+
 	# To setup the Date & Time clocks
 	var timeDict = OS.get_datetime()
 	var second = str(timeDict.second)
@@ -293,18 +341,7 @@ func _process(delta):
 	var dayString = "Day: " + str(daysDiff)
 	dayLabel.clear()
 	dayLabel.add_text(dayString)
-	
 
-func _on_Timer_timeout():
-	$"Feed button".disabled = false
-	
-
-func _on_Timer2_timeout():
-	$"Play button".disabled = false
-
-
-func _on_Timer3_timeout():
-	$"Clean button".disabled = false
 
 func reset_all_counters(): 
 	food_counter = 0
@@ -344,31 +381,34 @@ func _on_Input_text_entered(new_text):
 		level += 30
 	elif new_text == 'increase_food()':
 		food_counter += 10
+		level += 2.5
 		feed_increase_level()
-		timer1.stop()
+		clickFeedButtonTime = null
 		$"Feed button".disabled = false
 	elif new_text == 'increase_mood()':
 		mood_counter += 10
+		level += 1.5
 		play_increase_level()
-		timer2.stop()
+		clickPlayButtonTime = null
 		$"Play button".disabled = false
 	elif new_text == 'increase_clean()':
 		clean_counter += 10
+		level += 1
 		clean_increase_level()
-		timer3.stop()
+		clickCleanButtonTime = null
 		$"Clean button".disabled = false
 	elif new_text == 'reset_all()':
 		level = 0
 		
 		reset_all_counters()
 		
-		$"Feed button".disabled = false
-		$"Play button".disabled = false
-		$"Clean button".disabled = false
+		clickFeedButtonTime = null
+		clickPlayButtonTime = null
+		clickCleanButtonTime = null		
 	elif new_text == 'reset_buttons()':
-		$"Feed button".disabled = false
-		$"Play button".disabled = false
-		$"Clean button".disabled = false
+		clickFeedButtonTime = null
+		clickPlayButtonTime = null
+		clickCleanButtonTime = null
 	elif new_text == 'check_random_number()':
 		$ConfirmationDialog.dialog_text = str(random_number)
 		$ConfirmationDialog.popup_centered()
@@ -384,7 +424,6 @@ func _on_Input_text_entered(new_text):
 		$ConfirmationDialog.dialog_text = "Day: " + dayString
 		$ConfirmationDialog.popup_centered()
 
-		
 	# Normal commands
 	elif new_text == 'feed':
 		$Player/feedSound.play()

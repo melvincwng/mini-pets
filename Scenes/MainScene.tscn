@@ -706,15 +706,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 43200.0
-
-[node name="Timer3" type="Timer" parent="."]
-wait_time = 43200.0
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 43200.0
-
 [node name="Label" type="Label" parent="."]
 margin_left = 32.0
 margin_top = 512.0
@@ -772,8 +763,5 @@ stream = ExtResource( 243 )
 [connection signal="pressed" from="Clean button" to="Clean button" method="_on_Clean_button_pressed"]
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
 [connection signal="pressed" from="Save button" to="." method="_on_Save_button_pressed"]
-[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
-[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="text_entered" from="InputArea/HBoxContainer/Input" to="." method="_on_Input_text_entered"]
 [connection signal="text_entered" from="InputArea/HBoxContainer/Input" to="InputArea/HBoxContainer/Input" method="_on_Input_text_entered"]
