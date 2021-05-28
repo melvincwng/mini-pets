@@ -315,6 +315,7 @@ position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
 animation = "Jump"
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -324,7 +325,6 @@ __meta__ = {
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -334,6 +334,7 @@ __meta__ = {
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
+frame = 4
 playing = true
 flip_h = true
 __meta__ = {
