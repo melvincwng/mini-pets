@@ -37,17 +37,17 @@ func _ready():
 # this function func _on_Player_animation_finished() will automatically run
 # to play the correct animated slime based on the level of the player	
 func _on_Player_animation_finished():
-	if level < 1:
+	if level < 30:
 		sprite.play("IdleBlack")
-	elif level >= 1 and level < 2:
+	elif level >= 30 and level < 60:
 		sprite.play("IdleBlue")
-	elif level >= 2 and level < 3:
+	elif level >= 60 and level < 90:
 		sprite.play("IdleRed")
-	elif level >= 3 and level < 4:
+	elif level >= 90 and level < 120:
 		sprite.play("IdleGreen")
-	elif level >= 4 and level < 5:
+	elif level >= 120 and level < 150:
 		sprite.play("IdleGrey")	
-	elif level >= 5 and level < 6:
+	elif level >= 150 and level < 180:
 		sprite.play("Idle")
 	else:
 		if random_number == 88:
@@ -113,17 +113,17 @@ func clean_increase_level():
 	
 	
 func evolve_pet_feed():
-	if level < 1:
+	if level < 30:
 		sprite.play("FeedBlack")
-	elif level >= 1 and level <2:
+	elif level >= 30 and level < 60:
 		sprite.play("FeedBlue")
-	elif level >=2 and level <3:
+	elif level >=60 and level < 90:
 		sprite.play("FeedRed")
-	elif level >= 3 and level < 4:
+	elif level >= 90 and level < 120:
 		sprite.play("FeedGreen")
-	elif level >= 4 and level < 5:
+	elif level >= 120 and level < 150:
 		sprite.play("FeedGrey")
-	elif level >= 5 and level < 6:
+	elif level >= 150 and level < 180:
 		sprite.play("Feed")
 	else:
 		if random_number == 88:
@@ -133,17 +133,17 @@ func evolve_pet_feed():
 
 
 func evolve_pet_play():
-	if level < 1:
+	if level < 30:
 		sprite.play("PlayBlack")
-	elif level >= 1 and level <2:
+	elif level >= 30 and level < 60:
 		sprite.play("PlayBlue")
-	elif level >=2 and level <3:
+	elif level >=60 and level < 90:
 		sprite.play("PlayRed")
-	elif level >= 3 and level < 4:
+	elif level >= 90 and level < 120:
 		sprite.play("PlayGreen")
-	elif level >= 4 and level < 5:
+	elif level >= 120 and level < 150:
 		sprite.play("PlayGrey")
-	elif level >= 5 and level < 6:
+	elif level >= 150 and level < 180:
 		sprite.play("Play")
 	else:
 		if random_number == 88:
@@ -152,17 +152,17 @@ func evolve_pet_play():
 			sprite.play("PlayMetal")
 		
 func evolve_pet_clean():
-	if level < 1:
+	if level < 30:
 		sprite.play("CleanBlack")
-	elif level >= 1 and level <2:
+	elif level >= 30 and level < 60:
 		sprite.play("CleanBlue")
-	elif level >=2 and level <3:
+	elif level >= 60 and level < 90:
 		sprite.play("CleanRed")
-	elif level >= 3 and level < 4:
+	elif level >= 90 and level < 120:
 		sprite.play("CleanGreen")
-	elif level >= 4 and level < 5:
+	elif level >= 120 and level < 150:
 		sprite.play("CleanGrey")
-	elif level >= 5 and level < 6:
+	elif level >= 150 and level < 180:
 		sprite.play("Clean")
 	else:
 		if random_number == 88:
