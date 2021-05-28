@@ -255,7 +255,7 @@ func check_feed_button_reset():
 		$"Feed button".disabled = false
 	else:
 		var currentTime = OS.get_unix_time()
-		if currentTime - clickFeedButtonTime >= 60:
+		if currentTime - clickFeedButtonTime >= 28800:
 			$"Feed button".disabled = false
 		else:
 			$"Feed button".disabled = true
@@ -266,7 +266,7 @@ func check_play_button_reset():
 		$"Play button".disabled = false
 	else:
 		var currentTime = OS.get_unix_time()
-		if currentTime - clickPlayButtonTime >= 60:
+		if currentTime - clickPlayButtonTime >= 28800:
 			$"Play button".disabled = false
 		else:
 			$"Play button".disabled = true
@@ -277,7 +277,7 @@ func check_clean_button_reset():
 		$"Clean button".disabled = false
 	else:
 		var currentTime = OS.get_unix_time()
-		if currentTime - clickCleanButtonTime >= 60:
+		if currentTime - clickCleanButtonTime >= 28800:
 			$"Clean button".disabled = false
 		else:
 			$"Clean button".disabled = true		
