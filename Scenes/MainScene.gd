@@ -313,6 +313,7 @@ func _on_Input_text_entered(new_text):
 		$"Feed button".disabled = false
 		$"Play button".disabled = false
 		$"Clean button".disabled = false
+	
 		
 	# Normal commands
 	elif new_text == 'feed':
