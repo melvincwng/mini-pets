@@ -375,6 +375,15 @@ func _on_Input_text_entered(new_text):
 	elif new_text == 'check_unix_timestamp()':
 		$ConfirmationDialog.dialog_text = str(startDay)
 		$ConfirmationDialog.popup_centered()
+	elif new_text == 'check_day()':
+		# need to cast both numbers as float to do "real" division in Godot
+		# https://www.reddit.com/r/godot/comments/actyfk/godot_how_to_do_real_division_in_gdscript/
+		var currentDay = OS.get_unix_time()
+		var daysDiff = float((currentDay - startDay)) / float((24 * 60 * 60))
+		var dayString = str(daysDiff)
+		$ConfirmationDialog.dialog_text = "Day: " + dayString
+		$ConfirmationDialog.popup_centered()
+
 		
 	# Normal commands
 	elif new_text == 'feed':

@@ -79,7 +79,7 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 20 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 19 ) ],
 "loop": true,
-"name": "default",
+"name": "Jump",
 "speed": 7.5
 } ]
 
@@ -314,7 +314,7 @@ __meta__ = {
 position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
-frame = 7
+animation = "Jump"
 playing = true
 __meta__ = {
 "_edit_lock_": true
