@@ -6,9 +6,9 @@ var food_counter = 0
 var mood_counter = 0
 var clean_counter = 0
 #need to be able to save this random_number so that the system can remember if the player has a chance to transform into the rare fire slime
-var random_number = random_number_generator() if random_number == null else random_number
+var random_number
 # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
-var startDay = OS.get_unix_time() if startDay == null else startDay
+var startDay
 var gameData_file = "user://gameData.save"
 
 
@@ -31,15 +31,20 @@ func _ready():
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
+	load_data()
 	#print(random_number)
 	#print(startDay)
-	load_data()
 	
 	
 func save_data():
 	var file = File.new()
 	file.open(gameData_file, File.WRITE)
 	file.store_var(level)
+	file.store_var(food_counter)
+	file.store_var(mood_counter)
+	file.store_var(clean_counter)
+	file.store_var(random_number)
+	file.store_var(startDay)
 	file.close()
 	
 	
@@ -49,11 +54,21 @@ func load_data():
 	if file.file_exists(gameData_file):
 		file.open(gameData_file, File.READ)
 		level = file.get_var()
+		food_counter = file.get_var()
+		mood_counter = file.get_var()
+		clean_counter = file.get_var()
+		random_number = file.get_var()
+		startDay = file.get_var()
 		file.close()
 	else:
 		level = 0
+		food_counter = 0
+		mood_counter = 0
+		clean_counter = 0
+		random_number = random_number_generator()
+		startDay = OS.get_unix_time()
 		
-	
+		
 # This is similar to useEffect hook in JS
 # when line 17 aka the transparent slime "Idle" animation ends
 # this function func _on_Player_animation_finished() will automatically run
@@ -206,14 +221,34 @@ func every_game_tick_increase_level():
 	var levelString = "Level: " + str(level) + " #"
 	levelLabel.clear()
 	levelLabel.set_text(levelString)
-			
+
+
+func every_game_tick_check_food():
+	var foodString = "Food Counter: " + str(food_counter)
+	foodLabel.clear()
+	foodLabel.set_text(foodString)		
+
+
+func every_game_tick_check_mood():
+	var moodString = "Mood Counter: " + str(mood_counter)
+	moodLabel.clear()
+	moodLabel.set_text(moodString)	
+	
+
+func every_game_tick_check_clean():
+	var cleanString = "Clean Counter: " + str(clean_counter)
+	cleanLabel.clear()
+	cleanLabel.set_text(cleanString)
 			
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Every game-tick where the player is in the game, 
 	# this every_game_tick_increase_level() function will be called
 	# which increases the player's level by a minute amount
-	every_game_tick_increase_level() 
+	every_game_tick_increase_level()
+	every_game_tick_check_food() 
+	every_game_tick_check_mood()
+	every_game_tick_check_clean()
 	
 	# To setup the Date & Time clocks
 	var timeDict = OS.get_datetime()
@@ -288,22 +323,22 @@ func reset_all_counters():
 func _on_Input_text_entered(new_text):
 	# Developer cheat codes
 	if new_text == 'change_black_slime()':
-		level = 0.4
+		level = 0.5
 	elif new_text == 'change_blue_slime()':
-		level = 1.4
+		level = 30.5
 	elif new_text == 'change_red_slime()':
-		level = 2.4
+		level = 60.5
 	elif new_text == 'change_green_slime()':
-		level = 3.4
+		level = 90.5
 	elif new_text == 'change_grey_slime()':
-		level = 4.4
+		level = 120.5
 	elif new_text == 'change_transparent_slime()':
-		level = 5.4
+		level = 150.5
 	elif new_text == 'change_metal_slime()':
-		level = 6.4
+		level = 180.5
 		random_number = 1
 	elif new_text == 'change_fire_slime()':
-		level = 6.4
+		level = 180.5
 		random_number = 88
 	elif new_text == 'increase_level()':
 		level += 30
