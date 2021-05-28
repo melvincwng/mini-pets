@@ -23,9 +23,6 @@ onready var foodLabel = $Food
 onready var moodLabel = $Mood
 onready var cleanLabel = $Clean
 onready var sprite = $Player
-onready var timer1 = $Timer
-onready var timer2 = $Timer2
-onready var timer3 = $Timer3
 
 
 # Called when the node enters the scene tree for the first time.
