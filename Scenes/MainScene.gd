@@ -7,6 +7,8 @@ var mood_counter = 0
 var clean_counter = 0
 #need to be able to save this random_number so that the system can remember if the player has a chance to transform into the rare fire slime
 var random_number = random_number_generator() if random_number == null else random_number
+# need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
+var startDay = OS.get_unix_time() if startDay == null else startDay
 
 
 onready var dateLabel = $Date
@@ -20,7 +22,6 @@ onready var sprite = $Player
 onready var timer1 = $Timer
 onready var timer2 = $Timer2
 onready var timer3 = $Timer3
-onready var startDay = OS.get_unix_time() # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,6 +31,7 @@ func _ready():
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
 	#print(random_number)
+	#print(startDay)
 	
 	
 # This is similar to useEffect hook in JS
@@ -233,7 +235,7 @@ func _process(delta):
 	
 	# To setup the Day clock/timer
 	var currentDay = OS.get_unix_time()
-	var daysDiff = (currentDay - startDay) / (24 * 60 * 60)
+	var daysDiff = int((currentDay - startDay) / (24 * 60 * 60))
 	var dayString = "Day: " + str(daysDiff)
 	dayLabel.clear()
 	dayLabel.add_text(dayString)
