@@ -35,6 +35,7 @@ func _ready():
 	admob.load_interstitial()
 	
 	
+	
 func save_data():
 	var file = File.new()
 	file.open(gameData_file, File.WRITE)
@@ -79,17 +80,17 @@ func load_data():
 # this function func _on_Player_animation_finished() will automatically run
 # to play the correct animated slime based on the level of the player	
 func _on_Player_animation_finished():
-	if level < 30:
+	if level < 45:
 		sprite.play("IdleBlack")
-	elif level >= 30 and level < 60:
+	elif level >= 45 and level < 75:
 		sprite.play("IdleBlue")
-	elif level >= 60 and level < 90:
+	elif level >= 75 and level < 135:
 		sprite.play("IdleRed")
-	elif level >= 90 and level < 120:
+	elif level >= 135 and level < 210:
 		sprite.play("IdleGreen")
-	elif level >= 120 and level < 150:
+	elif level >= 210 and level < 285:
 		sprite.play("IdleGrey")	
-	elif level >= 150 and level < 180:
+	elif level >= 285 and level < 365:
 		sprite.play("Idle")
 	else:
 		if random_number == 88:
@@ -157,17 +158,17 @@ func clean_increase_level():
 	
 	
 func evolve_pet_feed():
-	if level < 30:
+	if level < 45:
 		sprite.play("FeedBlack")
-	elif level >= 30 and level < 60:
+	elif level >= 45 and level < 75:
 		sprite.play("FeedBlue")
-	elif level >=60 and level < 90:
+	elif level >=75 and level < 135:
 		sprite.play("FeedRed")
-	elif level >= 90 and level < 120:
+	elif level >= 135 and level < 210:
 		sprite.play("FeedGreen")
-	elif level >= 120 and level < 150:
+	elif level >= 210 and level < 285:
 		sprite.play("FeedGrey")
-	elif level >= 150 and level < 180:
+	elif level >= 285 and level < 365:
 		sprite.play("Feed")
 	else:
 		if random_number == 88:
@@ -177,17 +178,17 @@ func evolve_pet_feed():
 
 
 func evolve_pet_play():
-	if level < 30:
+	if level < 45:
 		sprite.play("PlayBlack")
-	elif level >= 30 and level < 60:
+	elif level >= 45 and level < 75:
 		sprite.play("PlayBlue")
-	elif level >=60 and level < 90:
+	elif level >=75 and level < 135:
 		sprite.play("PlayRed")
-	elif level >= 90 and level < 120:
+	elif level >= 135 and level < 210:
 		sprite.play("PlayGreen")
-	elif level >= 120 and level < 150:
+	elif level >= 210 and level < 285:
 		sprite.play("PlayGrey")
-	elif level >= 150 and level < 180:
+	elif level >= 285 and level < 365:
 		sprite.play("Play")
 	else:
 		if random_number == 88:
@@ -197,17 +198,17 @@ func evolve_pet_play():
 		
 		
 func evolve_pet_clean():
-	if level < 30:
+	if level < 45:
 		sprite.play("CleanBlack")
-	elif level >= 30 and level < 60:
+	elif level >= 45 and level < 75:
 		sprite.play("CleanBlue")
-	elif level >= 60 and level < 90:
+	elif level >= 75 and level < 135:
 		sprite.play("CleanRed")
-	elif level >= 90 and level < 120:
+	elif level >= 135 and level < 210:
 		sprite.play("CleanGreen")
-	elif level >= 120 and level < 150:
+	elif level >= 210 and level < 285:
 		sprite.play("CleanGrey")
-	elif level >= 150 and level < 180:
+	elif level >= 285 and level < 365:
 		sprite.play("Clean")
 	else:
 		if random_number == 88:
@@ -360,20 +361,20 @@ func _on_Input_text_entered(new_text):
 	if new_text == 'change_black_slime()':
 		level = 0.5
 	elif new_text == 'change_blue_slime()':
-		level = 30.5
+		level = 45.5
 	elif new_text == 'change_red_slime()':
-		level = 60.5
+		level = 75.5
 	elif new_text == 'change_green_slime()':
-		level = 90.5
+		level = 135.5
 	elif new_text == 'change_grey_slime()':
-		level = 120.5
+		level = 210.5
 	elif new_text == 'change_transparent_slime()':
-		level = 150.5
+		level = 285.5
 	elif new_text == 'change_metal_slime()':
-		level = 180.5
+		level = 365.5
 		random_number = 1
 	elif new_text == 'change_fire_slime()':
-		level = 180.5
+		level = 365.5
 		random_number = 88
 	elif new_text == 'increase_level()':
 		level += 30
