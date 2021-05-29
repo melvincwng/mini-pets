@@ -499,7 +499,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -754,7 +754,7 @@ script = ExtResource( 241 )
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
-rect_min_size = Vector2( 400, 140 )
+rect_min_size = Vector2( 200, 70 )
 window_title = ""
 
 [node name="save" type="AudioStreamPlayer" parent="ConfirmationDialog"]
@@ -763,7 +763,7 @@ stream = ExtResource( 243 )
 [node name="AdMob" type="Node" parent="."]
 script = ExtResource( 244 )
 is_real = true
-banner_id = "ca-app-pub-4532904817900631/7703187781"
+interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 [connection signal="animation_finished" from="Player" to="." method="_on_Player_animation_finished"]
 [connection signal="pressed" from="Feed button" to="Feed button" method="_on_Feed_button_pressed"]
 [connection signal="pressed" from="Play button" to="Play button" method="_on_Play_button_pressed"]
