@@ -23,6 +23,7 @@ onready var foodLabel = $Food
 onready var moodLabel = $Mood
 onready var cleanLabel = $Clean
 onready var sprite = $Player
+onready var admob = $AdMob
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,6 +33,8 @@ func _ready():
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
 	load_data()
+	admob.load_banner()
+	admob.show_banner()
 	
 	
 func save_data():
