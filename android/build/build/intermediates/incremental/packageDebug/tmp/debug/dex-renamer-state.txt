@@ -1,4 +1,0 @@
-#Sat May 29 15:44:34 SGT 2021
-base.0=C\:\\Users\\TheWanderlustBoy93\\Desktop\\Godot\\Mini Pets\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
