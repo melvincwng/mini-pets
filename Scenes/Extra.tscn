@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Background/farm.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -35,6 +35,7 @@
 [ext_resource path="res://Player/Idle/grey (1).png" type="Texture" id=33]
 [ext_resource path="res://Player/Idle/black (1).png" type="Texture" id=34]
 [ext_resource path="res://Player/Feed/metal (7).png" type="Texture" id=35]
+[ext_resource path="res://Scenes/PrivacyPolicy.gd" type="Script" id=36]
 [ext_resource path="res://Scenes/Extra.gd" type="Script" id=37]
 
 [sub_resource type="DynamicFontData" id=1]
@@ -275,16 +276,15 @@ __meta__ = {
 }
 
 [node name="Back button" type="Button" parent="."]
-margin_left = 456.0
+margin_left = 320.0
 margin_top = 400.0
-margin_right = 552.0
+margin_right = 416.0
 margin_bottom = 440.0
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 10 )
 script = ExtResource( 4 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -300,12 +300,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PrivacyPolicy" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 400.0
+margin_right = 707.0
+margin_bottom = 440.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+script = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PP Text" type="Label" parent="PrivacyPolicy"]
+margin_right = 227.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Privacy Policy >"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="metalSlime1" type="AnimatedSprite" parent="."]
 position = Vector2( 832, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 11 )
 animation = "Idle"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 __meta__ = {
@@ -317,7 +342,7 @@ position = Vector2( 192, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 12 )
 animation = "Jump"
-frame = 2
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -327,7 +352,7 @@ __meta__ = {
 position = Vector2( 448, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 4
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -337,7 +362,7 @@ __meta__ = {
 position = Vector2( 576, 472 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 13 )
-frame = 3
+frame = 2
 playing = true
 flip_h = true
 __meta__ = {
@@ -429,3 +454,4 @@ __meta__ = {
 "_edit_lock_": true
 }
 [connection signal="pressed" from="Back button" to="Back button" method="_on_Back_button_pressed"]
+[connection signal="pressed" from="PrivacyPolicy" to="PrivacyPolicy" method="_on_PrivacyPolicy_pressed"]
