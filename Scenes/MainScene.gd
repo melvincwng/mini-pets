@@ -13,6 +13,7 @@ var gameData_file = "user://gameData.save"
 var clickFeedButtonTime
 var clickPlayButtonTime
 var clickCleanButtonTime
+var promoCodeCounter # For Mini Pets 1000 downloads promo code
 
 
 onready var dateLabel = $Date
@@ -48,6 +49,7 @@ func save_data():
 	file.store_var(clickFeedButtonTime)
 	file.store_var(clickPlayButtonTime)
 	file.store_var(clickCleanButtonTime)
+	file.store_var(promoCodeCounter)
 	file.close()
 	
 	
@@ -65,6 +67,11 @@ func load_data():
 		clickFeedButtonTime = file.get_var()
 		clickPlayButtonTime = file.get_var()
 		clickCleanButtonTime = file.get_var()
+		promoCodeCounter = file.get_var()
+		# for existing players with existing gameData.save file, 
+		# promoCodeCounter from line 70 will return null, hence add the codes below:
+		if promoCodeCounter == null:
+			promoCodeCounter = 1
 		file.close()
 	else:
 		level = 0
@@ -73,6 +80,7 @@ func load_data():
 		clean_counter = 0
 		random_number = random_number_generator()
 		startDay = OS.get_unix_time()
+		promoCodeCounter = 1
 		
 		
 # This is similar to useEffect hook in JS
@@ -435,10 +443,16 @@ func _on_Input_text_entered(new_text):
 		evolve_pet_clean()
 	
 	# Commands added to celebrate achievement of 1000+ downloads
-	elif new_text.to_lower() == 'mini-pets-1000':
-		$ConfirmationDialog.dialog_text = "HIHI"
+	elif new_text.to_lower() == 'mini-pets-1000' and promoCodeCounter == 1:
+		promoCodeCounter = 0
+		level += 50
+		$ConfirmationDialog.dialog_text = "Promo code redeemed!"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/save.play()
+	elif new_text.to_lower() == 'mini-pets-1000' and promoCodeCounter == 0:
+		$ConfirmationDialog.dialog_text = "Already used promo code!"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/error.play()
 		
 	# If invalid command...
 	else:
