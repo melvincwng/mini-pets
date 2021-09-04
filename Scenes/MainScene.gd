@@ -288,9 +288,29 @@ func check_clean_button_reset():
 			$"Clean button".disabled = false
 		else:
 			$"Clean button".disabled = true		
-			
+		
+		
+# Custom timer to call the fireworks animation:
+var time_passed = 0
+var time_for_one_call = 1 # call the fireworks function only oncer per second
+
+# function involved in calling the fireworks animation:
+func call_fireworks():
+	$Fireworks.global_position.x = rand_range(0, 1024)
+	$Fireworks.global_position.y = rand_range(0, 595)
+	$Fireworks2.global_position.x = rand_range(0, 1024)
+	$Fireworks2.global_position.y = rand_range(0, 595)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# if 60fps => means 60 frames per second => hence 1 frame = 1/60s => 0.017s (delta = 0.017s)
+# if 30fps => means 30 frames per second => hence 1 frame = 1/30s => 0.034s (delta = 0.034s)
 func _process(delta):
+	time_passed += delta
+	
+	if time_passed >= time_for_one_call:
+		call_fireworks()
+		time_passed -= time_for_one_call 
+		
 	
 	# Every game-tick where the player is in the game, 
 	# this every_game_tick_increase_level() function will be called
