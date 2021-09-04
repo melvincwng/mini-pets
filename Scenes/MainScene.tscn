@@ -265,7 +265,6 @@
 [ext_resource path="res://Background/Fireworks/firework (11).png" type="Texture" id=263]
 [ext_resource path="res://Background/Fireworks/firework (26).png" type="Texture" id=264]
 [ext_resource path="res://Background/Fireworks/firework (20).png" type="Texture" id=265]
-[ext_resource path="res://Background/Fireworks/firework (1).png" type="Texture" id=266]
 [ext_resource path="res://Background/Fireworks/firework (9).png" type="Texture" id=267]
 [ext_resource path="res://Background/Fireworks/firework (4).png" type="Texture" id=268]
 [ext_resource path="res://Background/Fireworks/firework (6).png" type="Texture" id=269]
@@ -275,6 +274,7 @@
 [ext_resource path="res://Background/Fireworks/firework (7).png" type="Texture" id=273]
 [ext_resource path="res://Background/Fireworks/firework (2).png" type="Texture" id=274]
 [ext_resource path="res://Background/Fireworks/firework (8).png" type="Texture" id=275]
+[ext_resource path="res://Background/Fireworks/firework (31).png" type="Texture" id=276]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -512,10 +512,10 @@ font_data = SubResource( 23 )
 
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
-"frames": [ ExtResource( 266 ), ExtResource( 274 ), ExtResource( 271 ), ExtResource( 268 ), ExtResource( 272 ), ExtResource( 269 ), ExtResource( 273 ), ExtResource( 267 ), ExtResource( 275 ), ExtResource( 270 ), ExtResource( 263 ), ExtResource( 254 ), ExtResource( 257 ), ExtResource( 252 ), ExtResource( 247 ), ExtResource( 258 ), ExtResource( 255 ), ExtResource( 253 ), ExtResource( 256 ), ExtResource( 265 ), ExtResource( 259 ), ExtResource( 259 ), ExtResource( 246 ), ExtResource( 260 ), ExtResource( 261 ), ExtResource( 262 ), ExtResource( 264 ), ExtResource( 250 ), ExtResource( 249 ), ExtResource( 248 ), ExtResource( 251 ) ],
+"frames": [ ExtResource( 274 ), ExtResource( 271 ), ExtResource( 268 ), ExtResource( 272 ), ExtResource( 269 ), ExtResource( 273 ), ExtResource( 267 ), ExtResource( 275 ), ExtResource( 270 ), ExtResource( 263 ), ExtResource( 254 ), ExtResource( 257 ), ExtResource( 252 ), ExtResource( 247 ), ExtResource( 258 ), ExtResource( 255 ), ExtResource( 253 ), ExtResource( 256 ), ExtResource( 265 ), ExtResource( 259 ), ExtResource( 259 ), ExtResource( 246 ), ExtResource( 260 ), ExtResource( 261 ), ExtResource( 262 ), ExtResource( 264 ), ExtResource( 250 ), ExtResource( 249 ), ExtResource( 248 ), ExtResource( 251 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ), ExtResource( 276 ) ],
 "loop": true,
 "name": "default",
-"speed": 30.0
+"speed": 40.0
 } ]
 
 [node name="Main Scene" type="Node2D"]
@@ -538,7 +538,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -807,15 +807,15 @@ is_real = true
 interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 
 [node name="Fireworks" type="AnimatedSprite" parent="."]
-position = Vector2( 912, 272 )
+position = Vector2( 1152, 272 )
 frames = SubResource( 25 )
-frame = 9
+frame = 35
 playing = true
 
 [node name="Fireworks2" type="AnimatedSprite" parent="."]
-position = Vector2( 96, 280 )
+position = Vector2( -128, 280 )
 frames = SubResource( 25 )
-frame = 9
+frame = 33
 playing = true
 [connection signal="animation_finished" from="Player" to="." method="_on_Player_animation_finished"]
 [connection signal="pressed" from="Feed button" to="Feed button" method="_on_Feed_button_pressed"]

@@ -292,7 +292,7 @@ func check_clean_button_reset():
 		
 # Custom timer to call the fireworks animation:
 var time_passed = 0
-var time_for_one_call = 1 # call the fireworks function only oncer per second
+var time_for_one_call = 1 # call the fireworks function only once per second
 
 # function involved in calling the fireworks animation:
 func call_fireworks():
@@ -473,7 +473,19 @@ func _on_Input_text_entered(new_text):
 		$ConfirmationDialog.dialog_text = "Already used promo code!"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/error.play()
-		
+	elif new_text.to_lower() == 'off':
+		$ConfirmationDialog.dialog_text = "Fireworks background OFF"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/save.play()
+		$Fireworks.hide()
+		$Fireworks2.hide()
+	elif new_text.to_lower() == 'on':
+		$ConfirmationDialog.dialog_text = "Fireworks background ON"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/save.play()
+		$Fireworks.show()
+		$Fireworks2.show()
+	
 	# If invalid command...
 	else:
 		$ConfirmationDialog.dialog_text = "No such command..."
