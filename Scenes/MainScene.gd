@@ -433,8 +433,17 @@ func _on_Input_text_entered(new_text):
 	elif new_text == 'clean':
 		$Player/cleanSound.play()
 		evolve_pet_clean()
+	
+	# Commands added to celebrate achievement of 1000+ downloads
+	elif new_text.to_lower() == 'mini-pets-1000':
+		$ConfirmationDialog.dialog_text = "HIHI"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/save.play()
+		
+	# If invalid command...
 	else:
-		pass
+		$ConfirmationDialog.dialog_text = "No such command..."
+		$ConfirmationDialog.popup_centered()
 				
 		
 func _on_Save_button_pressed():
