@@ -1,4 +1,4 @@
-[gd_scene load_steps=269 format=2]
+[gd_scene load_steps=270 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -244,6 +244,7 @@
 [ext_resource path="res://Font/IBMPlexMono-Medium.ttf" type="DynamicFontData" id=242]
 [ext_resource path="res://Sounds/save.ogg" type="AudioStream" id=243]
 [ext_resource path="res://admob-lib/admob.gd" type="Script" id=244]
+[ext_resource path="res://Sounds/error.ogg" type="AudioStream" id=245]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -257,14 +258,104 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 210 ), ExtResource( 211 ) ],
 "loop": true,
-"name": "Play",
+"name": "PlayFire",
 "speed": 7.5
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "IdleBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "PlayBlue",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "CleanGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "PlayBlack",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "FeedBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "FeedRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Feed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "IdleRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
+"loop": true,
+"name": "CleanFire",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 188 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 194 ), ExtResource( 214 ), ExtResource( 181 ), ExtResource( 195 ), ExtResource( 193 ) ],
 "loop": true,
 "name": "FeedFire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
+"loop": true,
+"name": "PlayRed",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "FeedBlue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "FeedGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 224 ), ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 226 ) ],
+"loop": true,
+"name": "IdleMetal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 225 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 227 ), ExtResource( 229 ) ],
+"loop": true,
+"name": "FeedMetal",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
+"loop": true,
+"name": "IdleFire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"loop": true,
+"name": "CleanBlue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
+"loop": true,
+"name": "FeedGrey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "CleanRed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 156 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 152 ) ],
@@ -277,70 +368,30 @@ animations = [ {
 "name": "IdleGreen",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
+"frames": [ ExtResource( 219 ), ExtResource( 216 ), ExtResource( 220 ), ExtResource( 218 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 215 ), ExtResource( 222 ), ExtResource( 223 ) ],
 "loop": true,
-"name": "PlayRed",
-"speed": 7.5
+"name": "PlayMetal",
+"speed": 10.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
+"frames": [ ExtResource( 238 ), ExtResource( 237 ), ExtResource( 239 ), ExtResource( 236 ), ExtResource( 240 ) ],
 "loop": true,
-"name": "IdleBlack",
+"name": "CleanMetal",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
+"frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 70 ), ExtResource( 68 ), ExtResource( 69 ) ],
 "loop": true,
-"name": "FeedBlack",
+"name": "IdleBlue",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
 "loop": true,
-"name": "CleanGreen",
+"name": "CleanGrey",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
-"loop": true,
-"name": "FeedBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 224 ), ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 226 ) ],
-"loop": true,
-"name": "IdleMetal",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "PlayBlue",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 225 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 227 ), ExtResource( 229 ) ],
-"loop": true,
-"name": "FeedMetal",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
-"loop": true,
-"name": "FeedGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "PlayBlack",
-"speed": 7.5
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
 "loop": false,
 "name": "CleanBlack",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
-"loop": true,
-"name": "CleanRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 219 ), ExtResource( 216 ), ExtResource( 220 ), ExtResource( 218 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 215 ), ExtResource( 222 ), ExtResource( 223 ) ],
-"loop": true,
-"name": "PlayMetal",
-"speed": 10.0
 }, {
 "frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": true,
@@ -352,60 +403,10 @@ animations = [ {
 "name": "PlayGrey",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "FeedRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Feed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
-"loop": true,
-"name": "IdleFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 238 ), ExtResource( 237 ), ExtResource( 239 ), ExtResource( 236 ), ExtResource( 240 ) ],
-"loop": true,
-"name": "CleanMetal",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
-"loop": true,
-"name": "IdleRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 210 ), ExtResource( 211 ) ],
-"loop": true,
-"name": "PlayFire",
+"name": "Play",
 "speed": 7.5
-}, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
-"loop": true,
-"name": "CleanFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
-"loop": true,
-"name": "CleanBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 70 ), ExtResource( 68 ), ExtResource( 69 ) ],
-"loop": true,
-"name": "IdleBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
-"loop": true,
-"name": "FeedGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
-"loop": true,
-"name": "CleanGrey",
-"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -499,7 +500,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 4
+frame = 1
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -754,11 +755,14 @@ script = ExtResource( 241 )
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 margin_right = 200.0
 margin_bottom = 70.0
-rect_min_size = Vector2( 400, 140 )
+rect_min_size = Vector2( 200, 70 )
 window_title = ""
 
 [node name="save" type="AudioStreamPlayer" parent="ConfirmationDialog"]
 stream = ExtResource( 243 )
+
+[node name="error" type="AudioStreamPlayer" parent="ConfirmationDialog"]
+stream = ExtResource( 245 )
 
 [node name="AdMob" type="Node" parent="."]
 script = ExtResource( 244 )

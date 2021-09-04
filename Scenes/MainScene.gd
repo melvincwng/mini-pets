@@ -444,6 +444,7 @@ func _on_Input_text_entered(new_text):
 	else:
 		$ConfirmationDialog.dialog_text = "No such command..."
 		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/error.play()
 				
 		
 func _on_Save_button_pressed():
