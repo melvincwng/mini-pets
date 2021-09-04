@@ -437,12 +437,22 @@ func _on_Input_text_entered(new_text):
 		clickPlayButtonTime = null
 		clickCleanButtonTime = null
 	elif new_text == 'check_random_number()':
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = str(random_number)
 		$ConfirmationDialog.popup_centered()
 	elif new_text == 'check_unix_timestamp()':
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = str(startDay)
 		$ConfirmationDialog.popup_centered()
 	elif new_text == 'check_day()':
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
+		
 		# need to cast both numbers as float to do "real" division in Godot
 		# https://www.reddit.com/r/godot/comments/actyfk/godot_how_to_do_real_division_in_gdscript/
 		var currentDay = OS.get_unix_time()
@@ -450,6 +460,7 @@ func _on_Input_text_entered(new_text):
 		var dayString = str(daysDiff)
 		$ConfirmationDialog.dialog_text = "Day: " + dayString
 		$ConfirmationDialog.popup_centered()
+		
 
 	# Normal commands
 	elif new_text == 'feed':
@@ -464,22 +475,34 @@ func _on_Input_text_entered(new_text):
 	
 	# Commands added to celebrate achievement of 1000+ downloads
 	elif new_text.to_lower() == 'mini-pets-1000' and promoCodeCounter == 1:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		promoCodeCounter = 0
 		level += 50
 		$ConfirmationDialog.dialog_text = "Promo code redeemed!"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/save.play()
 	elif new_text.to_lower() == 'mini-pets-1000' and promoCodeCounter == 0:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = "Already used promo code!"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/error.play()
 	elif new_text.to_lower() == 'off':
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = "Fireworks background OFF"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/save.play()
 		$Fireworks.hide()
 		$Fireworks2.hide()
 	elif new_text.to_lower() == 'on':
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = "Fireworks background ON"
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/save.play()
@@ -488,6 +511,9 @@ func _on_Input_text_entered(new_text):
 	
 	# If invalid command...
 	else:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
 		$ConfirmationDialog.dialog_text = "No such command..."
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/error.play()
