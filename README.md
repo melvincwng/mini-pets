@@ -12,4 +12,12 @@ Development of the game: 21/05/2021 - 29/05/2021
 
 Ideation (1 day) > Planning (1 day) > Rough Design (1 day) > Gathering assets (1 day) > Coding & Internal testing (5 days)
 
-Proudly developed by: Melvin Ng
+# Useful Links (for personal reference)
+https://melvinng.itch.io/mini-pets
+https://sites.google.com/view/mini-pets-news 
+https://sites.google.com/view/mini-pets-privacy-policy/
+
+# Updates (if any)
+01/09/2021 - Mini Pets officially reached 1000+ downloads in Google Play Store! (Pending Google Play Store to update the download counter) :)
+
+&copy; 2021 - Proudly developed by: Melvin Ng
