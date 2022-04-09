@@ -14,6 +14,7 @@ var clickFeedButtonTime
 var clickPlayButtonTime
 var clickCleanButtonTime
 var promoCodeCounter # For Mini Pets 1000 downloads promo code
+var compensationGiftbox # For compensating users due to app crashes on 9th April 2022
 
 
 onready var dateLabel = $Date
@@ -50,6 +51,7 @@ func save_data():
 	file.store_var(clickPlayButtonTime)
 	file.store_var(clickCleanButtonTime)
 	file.store_var(promoCodeCounter)
+	file.store_var(compensationGiftbox)
 	file.close()
 	
 	
@@ -72,6 +74,10 @@ func load_data():
 		# promoCodeCounter from line 70 will return null, hence add the codes below:
 		if promoCodeCounter == null:
 			promoCodeCounter = 1
+		# same concept as promoCodeCounter
+		compensationGiftbox = file.get_var()
+		if compensationGiftbox == null:
+			compensationGiftbox = 1
 		file.close()
 	else:
 		level = 0
@@ -81,6 +87,7 @@ func load_data():
 		random_number = random_number_generator()
 		startDay = OS.get_unix_time()
 		promoCodeCounter = 1
+		compensationGiftbox = 1
 		
 		
 # This is similar to useEffect hook in JS
@@ -508,6 +515,24 @@ func _on_Input_text_entered(new_text):
 		$ConfirmationDialog/save.play()
 		$Fireworks.show()
 		$Fireworks2.show()
+		
+	# Commands added to compensate players due to app crashes caused by RuntimeException && VerifyError errors
+	elif new_text.to_lower() == 'compensation-giftbox' and compensationGiftbox == 1:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
+		compensationGiftbox = 0
+		level += 50
+		$ConfirmationDialog.dialog_text = "Giftbox redeemed!"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/save.play()
+	elif new_text.to_lower() == 'compensation-giftbox' and compensationGiftbox == 0:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
+		$ConfirmationDialog.dialog_text = "Already used promo code!"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/error.play()
 	
 	# If invalid command...
 	else:
