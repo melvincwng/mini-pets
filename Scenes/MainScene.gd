@@ -118,12 +118,8 @@ func loadBirthdayGifts():
 	# Returns random integer between 1 and 5, then converting into a string
 	# Part One (Logic for showing mini slimes):
 	if showMiniSlimes == true:
-		var animationNumberForMiniSlimeOne = str(randi() % 5 + 1)
-		var animationNumberForMiniSlimeTwo = str(randi() % 5 + 1)
-		var animationNumberForMiniSlimeThree = str(randi() % 5 + 1)
-		var animationNumberForMiniSlimeFour = str(randi() % 5 + 1)
-		var animationNumberForMiniSlimeFive = str(randi() % 5 + 1)
-		print(animationNumberForMiniSlimeOne, animationNumberForMiniSlimeTwo, animationNumberForMiniSlimeThree, animationNumberForMiniSlimeFour, animationNumberForMiniSlimeFive)
+		var animationNumberForMiniSlimes = str(randi() % 5 + 1)
+		# print(animationNumberForMiniSlimes)
 		
 		miniSlimeOne.show()
 		miniSlimeTwo.show()
@@ -131,16 +127,16 @@ func loadBirthdayGifts():
 		miniSlimeFour.show()
 		miniSlimeFive.show()
 		
-		miniSlimeOne.play(animationNumberForMiniSlimeOne)
-		miniSlimeTwo.play(animationNumberForMiniSlimeTwo)
-		miniSlimeThree.play(animationNumberForMiniSlimeThree)
-		miniSlimeFour.play(animationNumberForMiniSlimeFour)
-		miniSlimeFive.play(animationNumberForMiniSlimeFive)
+		miniSlimeOne.play(animationNumberForMiniSlimes)
+		miniSlimeTwo.play(animationNumberForMiniSlimes)
+		miniSlimeThree.play(animationNumberForMiniSlimes)
+		miniSlimeFour.play(animationNumberForMiniSlimes)
+		miniSlimeFive.play(animationNumberForMiniSlimes)
 	# Part Two (Logic for showing birthday cake decor):
 	if showBirthdayCake == true:
 		var cakes = ["Cake1", "Cake2", "Cake3", "Cake4", "Cake5", "Cake6", "Cake7", "Cake8"]
 		var cakeNumber = randi() % 8 # Returns a random index from 0 to 7
-		print(cakeNumber)
+		# print(cakeNumber)
 		
 		get_node(cakes[cakeNumber]).show()
 	

@@ -936,7 +936,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -952,11 +952,11 @@ stream = ExtResource( 38 )
 
 [node name="MiniSlimeOne" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 344, 464 )
+position = Vector2( 488, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 27 )
-animation = "1"
-frame = 5
+animation = "4"
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -964,11 +964,11 @@ __meta__ = {
 
 [node name="MiniSlimeTwo" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 624, 440 )
+position = Vector2( 520, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 26 )
-animation = "1"
-frame = 7
+animation = "4"
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -979,7 +979,8 @@ visible = false
 position = Vector2( 584, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 28 )
-animation = "1"
+animation = "4"
+frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -987,10 +988,10 @@ __meta__ = {
 
 [node name="MiniSlimeFour" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 408, 328 )
+position = Vector2( 552, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 29 )
-animation = "1"
+animation = "4"
 frame = 9
 playing = true
 __meta__ = {
@@ -999,10 +1000,10 @@ __meta__ = {
 
 [node name="MiniSlimeFive" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 640, 328 )
+position = Vector2( 616, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 30 )
-animation = "1"
+animation = "4"
 frame = 7
 playing = true
 __meta__ = {
@@ -1260,13 +1261,13 @@ interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 [node name="Fireworks" type="AnimatedSprite" parent="."]
 position = Vector2( 1152, 272 )
 frames = SubResource( 25 )
-frame = 16
+frame = 38
 playing = true
 
 [node name="Fireworks2" type="AnimatedSprite" parent="."]
 position = Vector2( -128, 280 )
 frames = SubResource( 25 )
-frame = 14
+frame = 36
 playing = true
 
 [node name="Cake1" type="Sprite" parent="."]

@@ -226,7 +226,7 @@ position = Vector2( 589.526, 476.212 )
 scale = Vector2( 3.36842, 4.12903 )
 frames = SubResource( 4 )
 animation = "Idle"
-frame = 7
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {
@@ -261,7 +261,7 @@ __meta__ = {
 position = Vector2( 605.526, 194.136 )
 scale = Vector2( 2.35714, 2.68996 )
 frames = SubResource( 7 )
-frame = 3
+frame = 8
 playing = true
 offset = Vector2( 10, 0 )
 __meta__ = {
@@ -416,7 +416,7 @@ __meta__ = {
 [node name="Exclamation" type="AnimatedSprite" parent="News button"]
 position = Vector2( 141.526, -3.78796 )
 frames = SubResource( 27 )
-frame = 5
+frame = 10
 playing = true
 
 [connection signal="mouse_entered" from="Start button" to="Start button" method="_on_Start_button_mouse_entered"]
