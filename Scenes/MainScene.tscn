@@ -936,7 +936,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 2
+frame = 4
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -956,7 +956,7 @@ position = Vector2( 344, 464 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 27 )
 animation = "1"
-frame = 2
+frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -968,7 +968,7 @@ position = Vector2( 624, 440 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 26 )
 animation = "1"
-frame = 4
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -980,7 +980,6 @@ position = Vector2( 584, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 28 )
 animation = "1"
-frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -992,7 +991,7 @@ position = Vector2( 408, 328 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 29 )
 animation = "1"
-frame = 6
+frame = 9
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1004,7 +1003,7 @@ position = Vector2( 640, 328 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 30 )
 animation = "1"
-frame = 4
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1261,13 +1260,13 @@ interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 [node name="Fireworks" type="AnimatedSprite" parent="."]
 position = Vector2( 1152, 272 )
 frames = SubResource( 25 )
-frame = 6
+frame = 16
 playing = true
 
 [node name="Fireworks2" type="AnimatedSprite" parent="."]
 position = Vector2( -128, 280 )
 frames = SubResource( 25 )
-frame = 4
+frame = 14
 playing = true
 
 [node name="Cake1" type="Sprite" parent="."]
