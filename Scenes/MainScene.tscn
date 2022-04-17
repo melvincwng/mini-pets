@@ -1,4 +1,4 @@
-[gd_scene load_steps=301 format=2]
+[gd_scene load_steps=564 format=2]
 
 [ext_resource path="res://Background/house.png" type="Texture" id=1]
 [ext_resource path="res://Sounds/the_past_8_bit_lofi_.ogg" type="AudioStream" id=2]
@@ -265,6 +265,7 @@
 [ext_resource path="res://Background/Fireworks/firework (11).png" type="Texture" id=263]
 [ext_resource path="res://Background/Fireworks/firework (26).png" type="Texture" id=264]
 [ext_resource path="res://Background/Fireworks/firework (20).png" type="Texture" id=265]
+[ext_resource path="res://Mini Slimes/5. Death/tile094.png" type="Texture" id=266]
 [ext_resource path="res://Background/Fireworks/firework (9).png" type="Texture" id=267]
 [ext_resource path="res://Background/Fireworks/firework (4).png" type="Texture" id=268]
 [ext_resource path="res://Background/Fireworks/firework (6).png" type="Texture" id=269]
@@ -275,47 +276,289 @@
 [ext_resource path="res://Background/Fireworks/firework (2).png" type="Texture" id=274]
 [ext_resource path="res://Background/Fireworks/firework (8).png" type="Texture" id=275]
 [ext_resource path="res://Background/Fireworks/firework (31).png" type="Texture" id=276]
+[ext_resource path="res://Mini Slimes/1. Idle/tile002.png" type="Texture" id=277]
+[ext_resource path="res://Mini Slimes/1. Idle/tile001.png" type="Texture" id=278]
+[ext_resource path="res://Mini Slimes/1. Idle/tile000.png" type="Texture" id=279]
+[ext_resource path="res://Mini Slimes/1. Idle/tile004.png" type="Texture" id=280]
+[ext_resource path="res://Mini Slimes/1. Idle/tile007.png" type="Texture" id=281]
+[ext_resource path="res://Mini Slimes/1. Idle/tile005.png" type="Texture" id=282]
+[ext_resource path="res://Mini Slimes/1. Idle/tile003.png" type="Texture" id=283]
+[ext_resource path="res://Mini Slimes/1. Idle/tile006.png" type="Texture" id=284]
+[ext_resource path="res://Mini Slimes/1. Idle/tile008.png" type="Texture" id=285]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile012.png" type="Texture" id=286]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile015.png" type="Texture" id=287]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile014.png" type="Texture" id=288]
+[ext_resource path="res://Mini Slimes/3. Walk/tile022.png" type="Texture" id=289]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile010.png" type="Texture" id=290]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile018.png" type="Texture" id=291]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile013.png" type="Texture" id=292]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile019.png" type="Texture" id=293]
+[ext_resource path="res://Mini Slimes/3. Walk/tile023.png" type="Texture" id=294]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile016.png" type="Texture" id=295]
+[ext_resource path="res://Mini Slimes/3. Walk/tile020.png" type="Texture" id=296]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile017.png" type="Texture" id=297]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile011.png" type="Texture" id=298]
+[ext_resource path="res://Mini Slimes/3. Walk/tile021.png" type="Texture" id=299]
+[ext_resource path="res://Mini Slimes/3. Walk/tile025.png" type="Texture" id=300]
+[ext_resource path="res://Mini Slimes/3. Walk/tile026.png" type="Texture" id=301]
+[ext_resource path="res://Mini Slimes/3. Walk/tile027.png" type="Texture" id=302]
+[ext_resource path="res://Mini Slimes/3. Walk/tile028.png" type="Texture" id=303]
+[ext_resource path="res://Mini Slimes/3. Walk/tile029.png" type="Texture" id=304]
+[ext_resource path="res://Mini Slimes/3. Walk/tile024.png" type="Texture" id=305]
+[ext_resource path="res://Mini Slimes/4. Attack/tile030.png" type="Texture" id=306]
+[ext_resource path="res://Mini Slimes/4. Attack/tile031.png" type="Texture" id=307]
+[ext_resource path="res://Mini Slimes/4. Attack/tile032.png" type="Texture" id=308]
+[ext_resource path="res://Mini Slimes/4. Attack/tile038.png" type="Texture" id=309]
+[ext_resource path="res://Mini Slimes/4. Attack/tile036.png" type="Texture" id=310]
+[ext_resource path="res://Mini Slimes/4. Attack/tile037.png" type="Texture" id=311]
+[ext_resource path="res://Mini Slimes/4. Attack/tile039.png" type="Texture" id=312]
+[ext_resource path="res://Mini Slimes/4. Attack/tile034.png" type="Texture" id=313]
+[ext_resource path="res://Mini Slimes/4. Attack/tile033.png" type="Texture" id=314]
+[ext_resource path="res://Mini Slimes/4. Attack/tile035.png" type="Texture" id=315]
+[ext_resource path="res://Mini Slimes/5. Death/tile046.png" type="Texture" id=316]
+[ext_resource path="res://Mini Slimes/5. Death/tile049.png" type="Texture" id=317]
+[ext_resource path="res://Mini Slimes/5. Death/tile040.png" type="Texture" id=318]
+[ext_resource path="res://Mini Slimes/5. Death/tile042.png" type="Texture" id=319]
+[ext_resource path="res://Mini Slimes/5. Death/tile047.png" type="Texture" id=320]
+[ext_resource path="res://Mini Slimes/5. Death/tile044.png" type="Texture" id=321]
+[ext_resource path="res://Mini Slimes/5. Death/tile045.png" type="Texture" id=322]
+[ext_resource path="res://Mini Slimes/5. Death/tile041.png" type="Texture" id=323]
+[ext_resource path="res://Mini Slimes/5. Death/tile043.png" type="Texture" id=324]
+[ext_resource path="res://Mini Slimes/5. Death/tile048.png" type="Texture" id=325]
+[ext_resource path="res://Mini Slimes/5. Death/tile093.png" type="Texture" id=326]
+[ext_resource path="res://Mini Slimes/5. Death/tile095.png" type="Texture" id=327]
+[ext_resource path="res://Mini Slimes/5. Death/tile092.png" type="Texture" id=328]
+[ext_resource path="res://Mini Slimes/5. Death/tile099.png" type="Texture" id=329]
+[ext_resource path="res://Mini Slimes/5. Death/tile096.png" type="Texture" id=330]
+[ext_resource path="res://Mini Slimes/5. Death/tile098.png" type="Texture" id=331]
+[ext_resource path="res://Mini Slimes/5. Death/tile097.png" type="Texture" id=332]
+[ext_resource path="res://Mini Slimes/1. Idle/tile009.png" type="Texture" id=333]
+[ext_resource path="res://Mini Slimes/1. Idle/tile059.png" type="Texture" id=334]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile063.png" type="Texture" id=335]
+[ext_resource path="res://Mini Slimes/3. Walk/tile071.png" type="Texture" id=336]
+[ext_resource path="res://Mini Slimes/1. Idle/tile051.png" type="Texture" id=337]
+[ext_resource path="res://Mini Slimes/1. Idle/tile054.png" type="Texture" id=338]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile065.png" type="Texture" id=339]
+[ext_resource path="res://Mini Slimes/3. Walk/tile072.png" type="Texture" id=340]
+[ext_resource path="res://Mini Slimes/3. Walk/tile073.png" type="Texture" id=341]
+[ext_resource path="res://Mini Slimes/3. Walk/tile076.png" type="Texture" id=342]
+[ext_resource path="res://Mini Slimes/3. Walk/tile077.png" type="Texture" id=343]
+[ext_resource path="res://Mini Slimes/3. Walk/tile078.png" type="Texture" id=344]
+[ext_resource path="res://Mini Slimes/3. Walk/tile079.png" type="Texture" id=345]
+[ext_resource path="res://Mini Slimes/4. Attack/tile080.png" type="Texture" id=346]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile066.png" type="Texture" id=347]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile067.png" type="Texture" id=348]
+[ext_resource path="res://Mini Slimes/4. Attack/tile081.png" type="Texture" id=349]
+[ext_resource path="res://Mini Slimes/4. Attack/tile082.png" type="Texture" id=350]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile060.png" type="Texture" id=351]
+[ext_resource path="res://Mini Slimes/4. Attack/tile083.png" type="Texture" id=352]
+[ext_resource path="res://Mini Slimes/4. Attack/tile085.png" type="Texture" id=353]
+[ext_resource path="res://Mini Slimes/4. Attack/tile084.png" type="Texture" id=354]
+[ext_resource path="res://Mini Slimes/4. Attack/tile086.png" type="Texture" id=355]
+[ext_resource path="res://Mini Slimes/4. Attack/tile087.png" type="Texture" id=356]
+[ext_resource path="res://Mini Slimes/3. Walk/tile074.png" type="Texture" id=357]
+[ext_resource path="res://Mini Slimes/1. Idle/tile050.png" type="Texture" id=358]
+[ext_resource path="res://Mini Slimes/1. Idle/tile055.png" type="Texture" id=359]
+[ext_resource path="res://Mini Slimes/1. Idle/tile056.png" type="Texture" id=360]
+[ext_resource path="res://Mini Slimes/1. Idle/tile057.png" type="Texture" id=361]
+[ext_resource path="res://Mini Slimes/1. Idle/tile053.png" type="Texture" id=362]
+[ext_resource path="res://Mini Slimes/1. Idle/tile058.png" type="Texture" id=363]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile061.png" type="Texture" id=364]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile062.png" type="Texture" id=365]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile064.png" type="Texture" id=366]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile068.png" type="Texture" id=367]
+[ext_resource path="res://Mini Slimes/3. Walk/tile070.png" type="Texture" id=368]
+[ext_resource path="res://Mini Slimes/3. Walk/tile075.png" type="Texture" id=369]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile069.png" type="Texture" id=370]
+[ext_resource path="res://Mini Slimes/1. Idle/tile052.png" type="Texture" id=371]
+[ext_resource path="res://Mini Slimes/4. Attack/tile089.png" type="Texture" id=372]
+[ext_resource path="res://Mini Slimes/4. Attack/tile088.png" type="Texture" id=373]
+[ext_resource path="res://Mini Slimes/5. Death/tile090.png" type="Texture" id=374]
+[ext_resource path="res://Mini Slimes/5. Death/tile091.png" type="Texture" id=375]
+[ext_resource path="res://Mini Slimes/1. Idle/tile100.png" type="Texture" id=376]
+[ext_resource path="res://Mini Slimes/1. Idle/tile101.png" type="Texture" id=377]
+[ext_resource path="res://Mini Slimes/5. Death/tile194.png" type="Texture" id=378]
+[ext_resource path="res://Mini Slimes/5. Death/tile193.png" type="Texture" id=379]
+[ext_resource path="res://Mini Slimes/5. Death/tile199.png" type="Texture" id=380]
+[ext_resource path="res://Mini Slimes/4. Attack/tile189.png" type="Texture" id=381]
+[ext_resource path="res://Mini Slimes/4. Attack/tile186.png" type="Texture" id=382]
+[ext_resource path="res://Mini Slimes/4. Attack/tile185.png" type="Texture" id=383]
+[ext_resource path="res://Mini Slimes/5. Death/tile191.png" type="Texture" id=384]
+[ext_resource path="res://Mini Slimes/4. Attack/tile181.png" type="Texture" id=385]
+[ext_resource path="res://Mini Slimes/5. Death/tile190.png" type="Texture" id=386]
+[ext_resource path="res://Mini Slimes/4. Attack/tile182.png" type="Texture" id=387]
+[ext_resource path="res://Mini Slimes/5. Death/tile192.png" type="Texture" id=388]
+[ext_resource path="res://Mini Slimes/5. Death/tile197.png" type="Texture" id=389]
+[ext_resource path="res://Mini Slimes/3. Walk/tile179.png" type="Texture" id=390]
+[ext_resource path="res://Mini Slimes/4. Attack/tile187.png" type="Texture" id=391]
+[ext_resource path="res://Mini Slimes/4. Attack/tile180.png" type="Texture" id=392]
+[ext_resource path="res://Mini Slimes/4. Attack/tile188.png" type="Texture" id=393]
+[ext_resource path="res://Mini Slimes/5. Death/tile195.png" type="Texture" id=394]
+[ext_resource path="res://Mini Slimes/5. Death/tile198.png" type="Texture" id=395]
+[ext_resource path="res://Mini Slimes/4. Attack/tile183.png" type="Texture" id=396]
+[ext_resource path="res://Mini Slimes/4. Attack/tile184.png" type="Texture" id=397]
+[ext_resource path="res://Mini Slimes/5. Death/tile196.png" type="Texture" id=398]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile111.png" type="Texture" id=399]
+[ext_resource path="res://Mini Slimes/3. Walk/tile120.png" type="Texture" id=400]
+[ext_resource path="res://Mini Slimes/3. Walk/tile122.png" type="Texture" id=401]
+[ext_resource path="res://Mini Slimes/3. Walk/tile124.png" type="Texture" id=402]
+[ext_resource path="res://Mini Slimes/4. Attack/tile134.png" type="Texture" id=403]
+[ext_resource path="res://Mini Slimes/4. Attack/tile135.png" type="Texture" id=404]
+[ext_resource path="res://Mini Slimes/5. Death/tile145.png" type="Texture" id=405]
+[ext_resource path="res://Mini Slimes/1. Idle/tile106.png" type="Texture" id=406]
+[ext_resource path="res://Mini Slimes/5. Death/tile147.png" type="Texture" id=407]
+[ext_resource path="res://Mini Slimes/5. Death/tile148.png" type="Texture" id=408]
+[ext_resource path="res://Mini Slimes/4. Attack/tile138.png" type="Texture" id=409]
+[ext_resource path="res://Mini Slimes/4. Attack/tile139.png" type="Texture" id=410]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile116.png" type="Texture" id=411]
+[ext_resource path="res://Mini Slimes/1. Idle/tile104.png" type="Texture" id=412]
+[ext_resource path="res://Mini Slimes/3. Walk/tile128.png" type="Texture" id=413]
+[ext_resource path="res://Mini Slimes/1. Idle/tile102.png" type="Texture" id=414]
+[ext_resource path="res://Mini Slimes/5. Death/tile141.png" type="Texture" id=415]
+[ext_resource path="res://Mini Slimes/5. Death/tile149.png" type="Texture" id=416]
+[ext_resource path="res://Mini Slimes/1. Idle/tile150.png" type="Texture" id=417]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile115.png" type="Texture" id=418]
+[ext_resource path="res://Mini Slimes/1. Idle/tile152.png" type="Texture" id=419]
+[ext_resource path="res://Mini Slimes/3. Walk/tile129.png" type="Texture" id=420]
+[ext_resource path="res://Mini Slimes/3. Walk/tile126.png" type="Texture" id=421]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile113.png" type="Texture" id=422]
+[ext_resource path="res://Mini Slimes/1. Idle/tile108.png" type="Texture" id=423]
+[ext_resource path="res://Mini Slimes/3. Walk/tile127.png" type="Texture" id=424]
+[ext_resource path="res://Mini Slimes/4. Attack/tile130.png" type="Texture" id=425]
+[ext_resource path="res://Mini Slimes/1. Idle/tile103.png" type="Texture" id=426]
+[ext_resource path="res://Mini Slimes/5. Death/tile142.png" type="Texture" id=427]
+[ext_resource path="res://Mini Slimes/5. Death/tile146.png" type="Texture" id=428]
+[ext_resource path="res://Mini Slimes/1. Idle/tile155.png" type="Texture" id=429]
+[ext_resource path="res://Mini Slimes/4. Attack/tile137.png" type="Texture" id=430]
+[ext_resource path="res://Mini Slimes/4. Attack/tile131.png" type="Texture" id=431]
+[ext_resource path="res://Mini Slimes/1. Idle/tile157.png" type="Texture" id=432]
+[ext_resource path="res://Mini Slimes/1. Idle/tile109.png" type="Texture" id=433]
+[ext_resource path="res://Mini Slimes/1. Idle/tile154.png" type="Texture" id=434]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile119.png" type="Texture" id=435]
+[ext_resource path="res://Mini Slimes/4. Attack/tile133.png" type="Texture" id=436]
+[ext_resource path="res://Mini Slimes/1. Idle/tile156.png" type="Texture" id=437]
+[ext_resource path="res://Mini Slimes/3. Walk/tile121.png" type="Texture" id=438]
+[ext_resource path="res://Mini Slimes/1. Idle/tile158.png" type="Texture" id=439]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile160.png" type="Texture" id=440]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile112.png" type="Texture" id=441]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile161.png" type="Texture" id=442]
+[ext_resource path="res://Mini Slimes/5. Death/tile140.png" type="Texture" id=443]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile162.png" type="Texture" id=444]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile163.png" type="Texture" id=445]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile110.png" type="Texture" id=446]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile164.png" type="Texture" id=447]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile165.png" type="Texture" id=448]
+[ext_resource path="res://Mini Slimes/1. Idle/tile151.png" type="Texture" id=449]
+[ext_resource path="res://Mini Slimes/1. Idle/tile159.png" type="Texture" id=450]
+[ext_resource path="res://Mini Slimes/1. Idle/tile105.png" type="Texture" id=451]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile114.png" type="Texture" id=452]
+[ext_resource path="res://Mini Slimes/3. Walk/tile125.png" type="Texture" id=453]
+[ext_resource path="res://Mini Slimes/4. Attack/tile132.png" type="Texture" id=454]
+[ext_resource path="res://Mini Slimes/5. Death/tile144.png" type="Texture" id=455]
+[ext_resource path="res://Mini Slimes/3. Walk/tile123.png" type="Texture" id=456]
+[ext_resource path="res://Mini Slimes/5. Death/tile143.png" type="Texture" id=457]
+[ext_resource path="res://Mini Slimes/1. Idle/tile107.png" type="Texture" id=458]
+[ext_resource path="res://Mini Slimes/4. Attack/tile136.png" type="Texture" id=459]
+[ext_resource path="res://Mini Slimes/1. Idle/tile153.png" type="Texture" id=460]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile117.png" type="Texture" id=461]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile118.png" type="Texture" id=462]
+[ext_resource path="res://Mini Slimes/3. Walk/tile176.png" type="Texture" id=463]
+[ext_resource path="res://Mini Slimes/3. Walk/tile172.png" type="Texture" id=464]
+[ext_resource path="res://Mini Slimes/3. Walk/tile170.png" type="Texture" id=465]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile168.png" type="Texture" id=466]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile166.png" type="Texture" id=467]
+[ext_resource path="res://Mini Slimes/3. Walk/tile171.png" type="Texture" id=468]
+[ext_resource path="res://Mini Slimes/3. Walk/tile173.png" type="Texture" id=469]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile169.png" type="Texture" id=470]
+[ext_resource path="res://Mini Slimes/3. Walk/tile174.png" type="Texture" id=471]
+[ext_resource path="res://Mini Slimes/2. Gesture/tile167.png" type="Texture" id=472]
+[ext_resource path="res://Mini Slimes/3. Walk/tile175.png" type="Texture" id=473]
+[ext_resource path="res://Mini Slimes/3. Walk/tile178.png" type="Texture" id=474]
+[ext_resource path="res://Mini Slimes/3. Walk/tile177.png" type="Texture" id=475]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (44).png" type="Texture" id=476]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (45).png" type="Texture" id=477]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (47).png" type="Texture" id=478]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (46).png" type="Texture" id=479]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (49).png" type="Texture" id=480]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (50).png" type="Texture" id=481]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (48).png" type="Texture" id=482]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (26).png" type="Texture" id=483]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (31).png" type="Texture" id=484]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (34).png" type="Texture" id=485]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (36).png" type="Texture" id=486]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (28).png" type="Texture" id=487]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (30).png" type="Texture" id=488]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (37).png" type="Texture" id=489]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (38).png" type="Texture" id=490]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (2).png" type="Texture" id=491]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (4).png" type="Texture" id=492]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (39).png" type="Texture" id=493]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (25).png" type="Texture" id=494]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (40).png" type="Texture" id=495]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (41).png" type="Texture" id=496]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (42).png" type="Texture" id=497]
+[ext_resource path="res://Mini Slimes/5. Death/sepia (43).png" type="Texture" id=498]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (35).png" type="Texture" id=499]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (27).png" type="Texture" id=500]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (3).png" type="Texture" id=501]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (6).png" type="Texture" id=502]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (16).png" type="Texture" id=503]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (19).png" type="Texture" id=504]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (5).png" type="Texture" id=505]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (8).png" type="Texture" id=506]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (14).png" type="Texture" id=507]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (18).png" type="Texture" id=508]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (21).png" type="Texture" id=509]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (23).png" type="Texture" id=510]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (32).png" type="Texture" id=511]
+[ext_resource path="res://Mini Slimes/4. Attack/sepia (33).png" type="Texture" id=512]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (24).png" type="Texture" id=513]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (13).png" type="Texture" id=514]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (12).png" type="Texture" id=515]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (7).png" type="Texture" id=516]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (17).png" type="Texture" id=517]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (9).png" type="Texture" id=518]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (11).png" type="Texture" id=519]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (15).png" type="Texture" id=520]
+[ext_resource path="res://Mini Slimes/2. Gesture/sepia (20).png" type="Texture" id=521]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (22).png" type="Texture" id=522]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (10).png" type="Texture" id=523]
+[ext_resource path="res://Mini Slimes/3. Walk/sepia (29).png" type="Texture" id=524]
+[ext_resource path="res://Mini Slimes/1. Idle/sepia (1).png" type="Texture" id=525]
+[ext_resource path="res://Food/cake (1).png" type="Texture" id=526]
+[ext_resource path="res://Food/cake (2).png" type="Texture" id=527]
+[ext_resource path="res://Food/cake (3).png" type="Texture" id=528]
+[ext_resource path="res://Food/cake (4).png" type="Texture" id=529]
+[ext_resource path="res://Food/cake (5).png" type="Texture" id=530]
+[ext_resource path="res://Food/cake (8).png" type="Texture" id=531]
+[ext_resource path="res://Food/cake (6).png" type="Texture" id=532]
+[ext_resource path="res://Food/cake (7).png" type="Texture" id=533]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "PlayBlue",
+"name": "Play",
 "speed": 7.5
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "Clean",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
 "loop": true,
 "name": "PlayBlack",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
+"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": true,
-"name": "CleanGrey",
-"speed": 5.0
+"name": "PlayGreen",
+"speed": 7.5
 }, {
 "frames": [ ExtResource( 156 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 152 ) ],
 "loop": true,
 "name": "IdleGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
-"loop": true,
-"name": "FeedGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 219 ), ExtResource( 216 ), ExtResource( 220 ), ExtResource( 218 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 215 ), ExtResource( 222 ), ExtResource( 223 ) ],
-"loop": true,
-"name": "PlayMetal",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
-"loop": true,
-"name": "CleanBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 188 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 194 ), ExtResource( 214 ), ExtResource( 181 ), ExtResource( 195 ), ExtResource( 193 ) ],
-"loop": true,
-"name": "FeedFire",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
@@ -323,74 +566,14 @@ animations = [ {
 "name": "FeedGrey",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 224 ), ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 226 ) ],
+"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
 "loop": true,
-"name": "IdleMetal",
+"name": "CleanBlue",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
+"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
 "loop": true,
-"name": "CleanRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
-"loop": true,
-"name": "IdleGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 225 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 227 ), ExtResource( 229 ) ],
-"loop": true,
-"name": "FeedMetal",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
-"loop": true,
-"name": "FeedBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
-"loop": true,
-"name": "CleanGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
-"loop": true,
-"name": "CleanFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Feed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 166 ), ExtResource( 157 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 168 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 163 ) ],
-"loop": true,
-"name": "PlayGrey",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "IdleBlack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
-"loop": true,
-"name": "FeedRed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 238 ), ExtResource( 237 ), ExtResource( 239 ), ExtResource( 236 ), ExtResource( 240 ) ],
-"loop": true,
-"name": "CleanMetal",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
-"loop": true,
-"name": "IdleFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
-"loop": false,
-"name": "CleanBlack",
+"name": "CleanGrey",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
@@ -403,9 +586,49 @@ animations = [ {
 "name": "IdleRed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
+"frames": [ ExtResource( 166 ), ExtResource( 157 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 168 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 163 ) ],
 "loop": true,
-"name": "FeedBlack",
+"name": "PlayGrey",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 219 ), ExtResource( 216 ), ExtResource( 220 ), ExtResource( 218 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 215 ), ExtResource( 222 ), ExtResource( 223 ) ],
+"loop": true,
+"name": "PlayMetal",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "CleanGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
+"loop": true,
+"name": "IdleFire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 210 ), ExtResource( 211 ) ],
+"loop": true,
+"name": "PlayFire",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
+"loop": false,
+"name": "CleanBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "PlayBlue",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 224 ), ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 226 ) ],
+"loop": true,
+"name": "IdleMetal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "IdleBlack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 70 ), ExtResource( 68 ), ExtResource( 69 ) ],
@@ -413,30 +636,205 @@ animations = [ {
 "name": "IdleBlue",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
 "loop": true,
-"name": "PlayGreen",
+"name": "Feed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "FeedGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 238 ), ExtResource( 237 ), ExtResource( 239 ), ExtResource( 236 ), ExtResource( 240 ) ],
+"loop": true,
+"name": "CleanMetal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "FeedBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "FeedBlue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "IdleGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "CleanRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 225 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 227 ), ExtResource( 229 ) ],
+"loop": true,
+"name": "FeedMetal",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 184 ), ExtResource( 201 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 202 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 210 ), ExtResource( 211 ) ],
+"frames": [ ExtResource( 188 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 194 ), ExtResource( 214 ), ExtResource( 181 ), ExtResource( 195 ), ExtResource( 193 ) ],
 "loop": true,
-"name": "PlayFire",
-"speed": 7.5
+"name": "FeedFire",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
 "loop": true,
-"name": "Play",
-"speed": 7.5
+"name": "CleanFire",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
 "loop": true,
-"name": "Clean",
+"name": "FeedRed",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 296 ), ExtResource( 299 ), ExtResource( 289 ), ExtResource( 294 ), ExtResource( 305 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ) ],
+"loop": true,
+"name": "3",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 279 ), ExtResource( 278 ), ExtResource( 277 ), ExtResource( 283 ), ExtResource( 280 ), ExtResource( 282 ), ExtResource( 284 ), ExtResource( 281 ), ExtResource( 285 ), ExtResource( 333 ) ],
+"loop": true,
+"name": "1",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 318 ), ExtResource( 323 ), ExtResource( 319 ), ExtResource( 324 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 316 ), ExtResource( 320 ), ExtResource( 325 ), ExtResource( 317 ) ],
+"loop": true,
+"name": "5",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 314 ), ExtResource( 313 ), ExtResource( 315 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 309 ), ExtResource( 312 ) ],
+"loop": true,
+"name": "4",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 290 ), ExtResource( 298 ), ExtResource( 286 ), ExtResource( 292 ), ExtResource( 288 ), ExtResource( 287 ), ExtResource( 295 ), ExtResource( 297 ), ExtResource( 291 ), ExtResource( 293 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+} ]
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ ExtResource( 368 ), ExtResource( 336 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 357 ), ExtResource( 369 ), ExtResource( 342 ), ExtResource( 343 ), ExtResource( 344 ), ExtResource( 345 ) ],
+"loop": true,
+"name": "3",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 358 ), ExtResource( 337 ), ExtResource( 371 ), ExtResource( 362 ), ExtResource( 338 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 363 ), ExtResource( 334 ) ],
+"loop": true,
+"name": "1",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 374 ), ExtResource( 375 ), ExtResource( 328 ), ExtResource( 326 ), ExtResource( 266 ), ExtResource( 327 ), ExtResource( 330 ), ExtResource( 332 ), ExtResource( 331 ), ExtResource( 329 ) ],
+"loop": true,
+"name": "5",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 346 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 352 ), ExtResource( 354 ), ExtResource( 353 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 373 ), ExtResource( 372 ) ],
+"loop": true,
+"name": "4",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 351 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 335 ), ExtResource( 366 ), ExtResource( 339 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 367 ), ExtResource( 370 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+} ]
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ ExtResource( 400 ), ExtResource( 438 ), ExtResource( 401 ), ExtResource( 456 ), ExtResource( 402 ), ExtResource( 453 ), ExtResource( 421 ), ExtResource( 424 ), ExtResource( 413 ), ExtResource( 420 ) ],
+"loop": true,
+"name": "3",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 376 ), ExtResource( 377 ), ExtResource( 414 ), ExtResource( 426 ), ExtResource( 412 ), ExtResource( 451 ), ExtResource( 406 ), ExtResource( 458 ), ExtResource( 423 ), ExtResource( 433 ) ],
+"loop": true,
+"name": "1",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 443 ), ExtResource( 415 ), ExtResource( 427 ), ExtResource( 457 ), ExtResource( 455 ), ExtResource( 405 ), ExtResource( 428 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 416 ) ],
+"loop": true,
+"name": "5",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 425 ), ExtResource( 431 ), ExtResource( 454 ), ExtResource( 436 ), ExtResource( 403 ), ExtResource( 404 ), ExtResource( 459 ), ExtResource( 430 ), ExtResource( 409 ), ExtResource( 410 ) ],
+"loop": true,
+"name": "4",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 446 ), ExtResource( 399 ), ExtResource( 441 ), ExtResource( 422 ), ExtResource( 452 ), ExtResource( 418 ), ExtResource( 411 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 435 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+} ]
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ ExtResource( 465 ), ExtResource( 468 ), ExtResource( 464 ), ExtResource( 469 ), ExtResource( 471 ), ExtResource( 473 ), ExtResource( 463 ), ExtResource( 475 ), ExtResource( 474 ), ExtResource( 390 ) ],
+"loop": true,
+"name": "3",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 417 ), ExtResource( 449 ), ExtResource( 419 ), ExtResource( 460 ), ExtResource( 434 ), ExtResource( 429 ), ExtResource( 437 ), ExtResource( 432 ), ExtResource( 439 ), ExtResource( 450 ) ],
+"loop": true,
+"name": "1",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 386 ), ExtResource( 384 ), ExtResource( 388 ), ExtResource( 379 ), ExtResource( 378 ), ExtResource( 394 ), ExtResource( 398 ), ExtResource( 389 ), ExtResource( 395 ), ExtResource( 380 ) ],
+"loop": true,
+"name": "5",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 392 ), ExtResource( 385 ), ExtResource( 387 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 383 ), ExtResource( 382 ), ExtResource( 391 ), ExtResource( 393 ), ExtResource( 381 ) ],
+"loop": true,
+"name": "4",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 440 ), ExtResource( 442 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 467 ), ExtResource( 472 ), ExtResource( 466 ), ExtResource( 470 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+} ]
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ ExtResource( 509 ), ExtResource( 522 ), ExtResource( 510 ), ExtResource( 513 ), ExtResource( 494 ), ExtResource( 483 ), ExtResource( 500 ), ExtResource( 487 ), ExtResource( 524 ), ExtResource( 488 ) ],
+"loop": true,
+"name": "3",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 525 ), ExtResource( 491 ), ExtResource( 501 ), ExtResource( 492 ), ExtResource( 505 ), ExtResource( 502 ), ExtResource( 516 ), ExtResource( 506 ), ExtResource( 518 ), ExtResource( 523 ) ],
+"loop": true,
+"name": "1",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 496 ), ExtResource( 497 ), ExtResource( 498 ), ExtResource( 476 ), ExtResource( 477 ), ExtResource( 479 ), ExtResource( 478 ), ExtResource( 482 ), ExtResource( 480 ), ExtResource( 481 ) ],
+"loop": true,
+"name": "5",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 484 ), ExtResource( 511 ), ExtResource( 512 ), ExtResource( 485 ), ExtResource( 499 ), ExtResource( 486 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 493 ), ExtResource( 495 ) ],
+"loop": true,
+"name": "4",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 519 ), ExtResource( 515 ), ExtResource( 514 ), ExtResource( 507 ), ExtResource( 520 ), ExtResource( 503 ), ExtResource( 517 ), ExtResource( 508 ), ExtResource( 504 ), ExtResource( 521 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
 } ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -538,7 +936,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 4
+frame = 2
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -551,6 +949,66 @@ stream = ExtResource( 39 )
 
 [node name="cleanSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource( 38 )
+
+[node name="MiniSlimeOne" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 344, 464 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 27 )
+animation = "1"
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MiniSlimeTwo" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 624, 440 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 26 )
+animation = "1"
+frame = 4
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MiniSlimeThree" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 584, 240 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 28 )
+animation = "1"
+frame = 6
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MiniSlimeFour" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 408, 328 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 29 )
+animation = "1"
+frame = 6
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MiniSlimeFive" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 640, 328 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 30 )
+animation = "1"
+frame = 4
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Level" type="RichTextLabel" parent="."]
 margin_left = 24.0
@@ -643,9 +1101,6 @@ margin_right = 368.0
 margin_bottom = 584.0
 custom_styles/disabled = SubResource( 5 )
 script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Feed text" type="Label" parent="Feed button"]
 margin_right = 96.0
@@ -755,9 +1210,6 @@ custom_fonts/font = SubResource( 20 )
 text = "Commands:"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="InputArea" type="PanelContainer" parent="."]
 margin_left = 16.0
@@ -809,14 +1261,102 @@ interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 [node name="Fireworks" type="AnimatedSprite" parent="."]
 position = Vector2( 1152, 272 )
 frames = SubResource( 25 )
-frame = 18
+frame = 6
 playing = true
 
 [node name="Fireworks2" type="AnimatedSprite" parent="."]
 position = Vector2( -128, 280 )
 frames = SubResource( 25 )
-frame = 16
+frame = 4
 playing = true
+
+[node name="Cake1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 760, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 526 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 527 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 528 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 433 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 529 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 433 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 530 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake6" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 532 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake7" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 533 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cake8" type="Sprite" parent="."]
+visible = false
+position = Vector2( 762, 432 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 531 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="animation_finished" from="Player" to="." method="_on_Player_animation_finished"]
 [connection signal="pressed" from="Feed button" to="Feed button" method="_on_Feed_button_pressed"]

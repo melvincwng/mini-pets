@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/tile150.png-09a6b253c012a0b7302685f69c8dfc08.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Mini Slimes/1. Idle/tile150.png"
+dest_files=[ "res://.import/tile150.png-09a6b253c012a0b7302685f69c8dfc08.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -15,6 +15,9 @@ var clickPlayButtonTime
 var clickCleanButtonTime
 var promoCodeCounter # For Mini Pets 1000 downloads promo code
 var compensationGiftbox # For compensating users due to app crashes on 9th April 2022
+var firstBirthdayGift # For celebration of Mini Pets 1st birthday in May 2022
+var showMiniSlimes
+var showBirthdayCake
 
 
 onready var dateLabel = $Date
@@ -25,6 +28,11 @@ onready var foodLabel = $Food
 onready var moodLabel = $Mood
 onready var cleanLabel = $Clean
 onready var sprite = $Player
+onready var miniSlimeOne = $MiniSlimeOne
+onready var miniSlimeTwo = $MiniSlimeTwo
+onready var miniSlimeThree = $MiniSlimeThree
+onready var miniSlimeFour = $MiniSlimeFour
+onready var miniSlimeFive = $MiniSlimeFive
 onready var admob = $AdMob
 
 # Called when the node enters the scene tree for the first time.
@@ -34,8 +42,8 @@ func _ready():
 	Signal.connect("clean_pet", self, "clean_increase_level")
 	sprite.play("IdleBlack")
 	load_data()
+	loadBirthdayGifts()
 	admob.load_interstitial()
-	
 	
 	
 func save_data():
@@ -52,8 +60,10 @@ func save_data():
 	file.store_var(clickCleanButtonTime)
 	file.store_var(promoCodeCounter)
 	file.store_var(compensationGiftbox)
+	file.store_var(firstBirthdayGift)
+	file.store_var(showMiniSlimes)
+	file.store_var(showBirthdayCake)
 	file.close()
-	
 	
 	
 func load_data():
@@ -78,6 +88,16 @@ func load_data():
 		compensationGiftbox = file.get_var()
 		if compensationGiftbox == null:
 			compensationGiftbox = 1
+		# same concept as compensationGiftbox
+		firstBirthdayGift = file.get_var()
+		if firstBirthdayGift == null:
+			firstBirthdayGift = 1
+		showMiniSlimes = file.get_var()
+		if showMiniSlimes == null:
+			showMiniSlimes = false
+		showBirthdayCake = file.get_var()
+		if showBirthdayCake == null:
+			showBirthdayCake = false
 		file.close()
 	else:
 		level = 0
@@ -88,6 +108,43 @@ func load_data():
 		startDay = OS.get_unix_time()
 		promoCodeCounter = 1
 		compensationGiftbox = 1
+		firstBirthdayGift = 1
+		showMiniSlimes = false
+		showBirthdayCake = false
+		
+
+func loadBirthdayGifts():
+	# Reference: https://docs.godotengine.org/en/stable/classes/class_@gdscript.html#class-gdscript-method-rand-range
+	# Returns random integer between 1 and 5, then converting into a string
+	# Part One (Logic for showing mini slimes):
+	if showMiniSlimes == true:
+		var animationNumberForMiniSlimeOne = str(randi() % 5 + 1)
+		var animationNumberForMiniSlimeTwo = str(randi() % 5 + 1)
+		var animationNumberForMiniSlimeThree = str(randi() % 5 + 1)
+		var animationNumberForMiniSlimeFour = str(randi() % 5 + 1)
+		var animationNumberForMiniSlimeFive = str(randi() % 5 + 1)
+		print(animationNumberForMiniSlimeOne, animationNumberForMiniSlimeTwo, animationNumberForMiniSlimeThree, animationNumberForMiniSlimeFour, animationNumberForMiniSlimeFive)
+		
+		miniSlimeOne.show()
+		miniSlimeTwo.show()
+		miniSlimeThree.show()
+		miniSlimeFour.show()
+		miniSlimeFive.show()
+		
+		miniSlimeOne.play(animationNumberForMiniSlimeOne)
+		miniSlimeTwo.play(animationNumberForMiniSlimeTwo)
+		miniSlimeThree.play(animationNumberForMiniSlimeThree)
+		miniSlimeFour.play(animationNumberForMiniSlimeFour)
+		miniSlimeFive.play(animationNumberForMiniSlimeFive)
+	# Part Two (Logic for showing birthday cake decor):
+	if showBirthdayCake == true:
+		var cakes = ["Cake1", "Cake2", "Cake3", "Cake4", "Cake5", "Cake6", "Cake7", "Cake8"]
+		var cakeNumber = randi() % 8 # Returns a random index from 0 to 7
+		print(cakeNumber)
+		
+		get_node(cakes[cakeNumber]).show()
+	
+		
 		
 		
 # This is similar to useEffect hook in JS
@@ -113,7 +170,7 @@ func _on_Player_animation_finished():
 		else:
 			sprite.play("IdleMetal")
 			
-			
+					
 func feed_increase_level():
 	$Player/feedSound.play()
 	level += 0.25
@@ -527,6 +584,28 @@ func _on_Input_text_entered(new_text):
 		$ConfirmationDialog.popup_centered()
 		$ConfirmationDialog/save.play()
 	elif new_text.to_lower() == 'compensation-giftbox' and compensationGiftbox == 0:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
+		$ConfirmationDialog.dialog_text = "Already used promo code!"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/error.play()
+		
+	# Commands added for Mini Pets 1st birthday/anniversary celebration
+	# Rewards are i) + 25 levels, ii) Mini Slimes pack, iii) Birthday Cake decor
+	elif new_text.to_lower() == '1st-birthday' and firstBirthdayGift == 1:
+		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
+		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
+		$InputArea/HBoxContainer/Input.release_focus()
+		level += 25
+		firstBirthdayGift = 0
+		showMiniSlimes = true
+		showBirthdayCake = true
+		loadBirthdayGifts()
+		$ConfirmationDialog.dialog_text = "Birthday gift redeemed!"
+		$ConfirmationDialog.popup_centered()
+		$ConfirmationDialog/save.play()
+	elif new_text.to_lower() == '1st-birthday' and firstBirthdayGift == 0:
 		# Bug fix: .release_focus() must put before the ConfirmationDialog changes...
 		# to prevent keyboard from showing... aka remove grab-focus() from LineEdit
 		$InputArea/HBoxContainer/Input.release_focus()
