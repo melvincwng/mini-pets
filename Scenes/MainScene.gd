@@ -33,6 +33,7 @@ onready var miniSlimeTwo = $MiniSlimeTwo
 onready var miniSlimeThree = $MiniSlimeThree
 onready var miniSlimeFour = $MiniSlimeFour
 onready var miniSlimeFive = $MiniSlimeFive
+onready var cat = $Cat
 onready var admob = $AdMob
 
 # Called when the node enters the scene tree for the first time.
@@ -43,6 +44,7 @@ func _ready():
 	sprite.play("IdleBlack")
 	load_data()
 	loadBirthdayGifts()
+	loadRandomCat()
 	admob.load_interstitial()
 	
 	
@@ -141,7 +143,12 @@ func loadBirthdayGifts():
 		get_node(cakes[cakeNumber]).show()
 	
 		
-		
+func loadRandomCat():
+	# Loads a random number from 1 - 16
+	var animationNumberForCat = str(randi() % 16 + 1)
+	cat.play(animationNumberForCat)
+	# print(animationNumberForCat)
+	
 		
 # This is similar to useEffect hook in JS
 # when line 90+ aka the transparent slime "Idle" animation ends
