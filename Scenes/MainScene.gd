@@ -34,6 +34,7 @@ onready var miniSlimeThree = $MiniSlimeThree
 onready var miniSlimeFour = $MiniSlimeFour
 onready var miniSlimeFive = $MiniSlimeFive
 onready var cat = $Cat
+onready var bird = $Bird
 onready var admob = $AdMob
 
 # Called when the node enters the scene tree for the first time.
@@ -45,6 +46,7 @@ func _ready():
 	load_data()
 	loadBirthdayGifts()
 	loadRandomCat()
+	loadRandomBird()
 	admob.load_interstitial()
 	
 	
@@ -148,6 +150,12 @@ func loadRandomCat():
 	var animationNumberForCat = str(randi() % 16 + 1)
 	cat.play(animationNumberForCat)
 	# print(animationNumberForCat)
+	
+func loadRandomBird():
+	# Loads a random number from 1 - 6
+	var animationNumberForBird = str(randi() % 6 + 1)
+	bird.play(animationNumberForBird)
+	print(animationNumberForBird)
 	
 		
 # This is similar to useEffect hook in JS
