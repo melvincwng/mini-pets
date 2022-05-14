@@ -39,6 +39,11 @@ onready var admob = $AdMob
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Need to call this function randomize() in order to generate a new seed/new state for the Random Number Generator when the game launches
+	# Otherwise, I've noticed that the RNG keeps returning the number 5 (based on its current seed/internal state), and hence the 5th animation (slime squishes) keeps have a tendency of being showed
+	# Calling this randomize() method every time the game launches, will ensure that the internal state of the RNG is "reset" every time the game launches, hence should resolve the above issue
+	# Reference: https://godotengine.org/qa/41006/randi-and-rand_range-do-not-return-random-number
+	randomize() 
 	Signal.connect("feed_pet", self, "feed_increase_level")
 	Signal.connect("play_pet", self, "play_increase_level")
 	Signal.connect("clean_pet", self, "clean_increase_level")
@@ -155,7 +160,7 @@ func loadRandomBird():
 	# Loads a random number from 1 - 6
 	var animationNumberForBird = str(randi() % 6 + 1)
 	bird.play(animationNumberForBird)
-	print(animationNumberForBird)
+	# print(animationNumberForBird)
 	
 		
 # This is similar to useEffect hook in JS
