@@ -9,7 +9,7 @@ var clean_counter = 0
 var random_number
 # need to find a way to store this... so the system knows how to calculate the number of days the pet has been growing
 var startDay
-var gameData_file = "user://gameData.save"
+var gameData_file = "user://gameData.save" # To find this file, go to C:\Users\<username>\AppData\Roaming\Godot\app_userdata\Mini Pets
 var clickFeedButtonTime
 var clickPlayButtonTime
 var clickCleanButtonTime
@@ -18,6 +18,8 @@ var compensationGiftbox # For compensating users due to app crashes on 9th April
 var firstBirthdayGift # For celebration of Mini Pets 1st birthday in May 2022
 var showMiniSlimes
 var showBirthdayCake
+var settings_file = "user://settings.save"
+# There is also a global variable/singleton called Settings.soundOn which we are using here in this script as well
 
 
 onready var dateLabel = $Date
@@ -36,6 +38,7 @@ onready var miniSlimeFive = $MiniSlimeFive
 onready var cat = $Cat
 onready var bird = $Bird
 onready var admob = $AdMob
+onready var soundButtonTextNode = $"Sound button/Sound Text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,6 +56,7 @@ func _ready():
 	loadRandomCat()
 	loadRandomBird()
 	admob.load_interstitial()
+	Settings.toggle_sound_button_text(Settings.soundOn, soundButtonTextNode)
 	
 	
 func save_data():
@@ -77,6 +81,8 @@ func save_data():
 	
 func load_data():
 	var file = File.new()
+	
+	# Existing players
 	if file.file_exists(gameData_file):
 		file.open(gameData_file, File.READ)
 		level = file.get_var()
@@ -89,25 +95,32 @@ func load_data():
 		clickPlayButtonTime = file.get_var()
 		clickCleanButtonTime = file.get_var()
 		promoCodeCounter = file.get_var()
+		
 		# for existing players with existing gameData.save file, 
 		# promoCodeCounter from line 70 will return null, hence add the codes below:
 		if promoCodeCounter == null:
 			promoCodeCounter = 1
+			
 		# same concept as promoCodeCounter
 		compensationGiftbox = file.get_var()
 		if compensationGiftbox == null:
 			compensationGiftbox = 1
+			
 		# same concept as compensationGiftbox
 		firstBirthdayGift = file.get_var()
 		if firstBirthdayGift == null:
 			firstBirthdayGift = 1
+			
 		showMiniSlimes = file.get_var()
 		if showMiniSlimes == null:
 			showMiniSlimes = false
+			
 		showBirthdayCake = file.get_var()
 		if showBirthdayCake == null:
 			showBirthdayCake = false
+			
 		file.close()
+	# New players
 	else:
 		level = 0
 		food_counter = 0
@@ -645,3 +658,25 @@ func _on_Save_button_pressed():
 	$ConfirmationDialog.popup_centered()
 	$ConfirmationDialog/save.play()
 	admob.show_interstitial()
+		
+		
+# This function turns the sound on/off depending on user's needs
+# https://godotengine.org/qa/121761/mute-button-sounds-on-all-scenes
+# https://docs.godotengine.org/en/stable/classes/class_audioserver.html
+# https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html
+func _on_Sound_button_pressed():
+	if Settings.soundOn == true:
+		# check previous state of Settings.soundOn
+		# if previously Settings.soundOn == true, and you press button, means you wan to turn off sound now
+		Settings.soundOn = false
+		Settings.save_sound_settings(Settings.soundOn) # Saves the soundVariable state in the settings file
+		Settings.toggle_sound(Settings.soundOn)
+		Settings.toggle_sound_button_text(Settings.soundOn, soundButtonTextNode)
+	else:
+		# check previous state of Settings.soundOn
+		# if previously Settings.soundOn == false, and you press button, means you wan to turn on sound now
+		Settings.soundOn = true
+		Settings.save_sound_settings(Settings.soundOn) # Saves the soundVariable state in the settings file
+		Settings.toggle_sound(Settings.soundOn)
+		Settings.toggle_sound_button_text(Settings.soundOn, soundButtonTextNode)
+		

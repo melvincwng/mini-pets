@@ -28,6 +28,7 @@ config/windows_native_icon="res://icon (1).ico"
 [autoload]
 
 Signal="*res://Scenes/Signal.gd"
+Settings="*res://Scenes/Settings.gd"
 
 [display]
 
