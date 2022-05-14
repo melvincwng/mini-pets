@@ -643,11 +643,6 @@ animations = [ {
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
-"loop": true,
-"name": "FeedRed",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 238 ), ExtResource( 237 ), ExtResource( 239 ), ExtResource( 236 ), ExtResource( 240 ) ],
 "loop": true,
 "name": "CleanMetal",
@@ -668,44 +663,9 @@ animations = [ {
 "name": "FeedMetal",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
-"loop": true,
-"name": "IdleGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
-"loop": false,
-"name": "CleanBlack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
-"loop": true,
-"name": "FeedGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
-"loop": true,
-"name": "CleanGrey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
-"loop": true,
-"name": "IdleRed",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 106 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 112 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 111 ), ExtResource( 110 ) ],
 "loop": true,
 "name": "PlayRed",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
-"loop": true,
-"name": "CleanBlue",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "PlayBlue",
 "speed": 7.5
 }, {
 "frames": [ ExtResource( 93 ), ExtResource( 90 ), ExtResource( 94 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 95 ) ],
@@ -713,15 +673,75 @@ animations = [ {
 "name": "FeedBlue",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "IdleRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 64 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 65 ) ],
+"loop": false,
+"name": "CleanBlack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 126 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "IdleGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 74 ), ExtResource( 82 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 76 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "PlayBlue",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
+"loop": true,
+"name": "CleanFire",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
 "loop": true,
 "name": "CleanRed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 178 ), ExtResource( 169 ), ExtResource( 171 ), ExtResource( 170 ), ExtResource( 176 ), ExtResource( 172 ) ],
+"loop": true,
+"name": "FeedGrey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "IdleBlack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 224 ), ExtResource( 235 ), ExtResource( 228 ), ExtResource( 234 ), ExtResource( 226 ) ],
 "loop": true,
 "name": "IdleMetal",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
+"loop": true,
+"name": "IdleFire",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "CleanGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
+"loop": true,
+"name": "FeedGreen",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 166 ), ExtResource( 157 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 168 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 163 ) ],
+"loop": true,
+"name": "PlayGrey",
+"speed": 7.5
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "PlayBlack",
+"speed": 7.5
 }, {
 "frames": [ ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 60 ) ],
 "loop": true,
@@ -733,59 +753,39 @@ animations = [ {
 "name": "IdleGrey",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 186 ), ExtResource( 182 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 186 ) ],
-"loop": true,
-"name": "IdleFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 147 ) ],
-"loop": true,
-"name": "FeedGreen",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
-"loop": true,
-"name": "PlayGreen",
-"speed": 7.5
-}, {
 "frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Feed",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 54 ), ExtResource( 48 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 47 ) ],
+"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
 "loop": true,
-"name": "PlayBlack",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 166 ), ExtResource( 157 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 158 ), ExtResource( 167 ), ExtResource( 162 ), ExtResource( 168 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 163 ) ],
-"loop": true,
-"name": "PlayGrey",
-"speed": 7.5
+"name": "CleanBlue",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 219 ), ExtResource( 216 ), ExtResource( 220 ), ExtResource( 218 ), ExtResource( 217 ), ExtResource( 221 ), ExtResource( 215 ), ExtResource( 222 ), ExtResource( 223 ) ],
 "loop": true,
 "name": "PlayMetal",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 196 ) ],
+"frames": [ ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": true,
-"name": "CleanFire",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "IdleBlack",
-"speed": 5.0
+"name": "PlayGreen",
+"speed": 7.5
 }, {
 "frames": [ ExtResource( 188 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 194 ), ExtResource( 214 ), ExtResource( 181 ), ExtResource( 195 ), ExtResource( 193 ) ],
 "loop": true,
 "name": "FeedFire",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 151 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 148 ), ExtResource( 149 ) ],
+"frames": [ ExtResource( 177 ), ExtResource( 179 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
 "loop": true,
-"name": "CleanGreen",
+"name": "CleanGrey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 115 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ) ],
+"loop": true,
+"name": "FeedRed",
 "speed": 5.0
 } ]
 
@@ -801,6 +801,11 @@ animations = [ {
 "name": "3",
 "speed": 7.5
 }, {
+"frames": [ ExtResource( 290 ), ExtResource( 298 ), ExtResource( 286 ), ExtResource( 292 ), ExtResource( 288 ), ExtResource( 287 ), ExtResource( 295 ), ExtResource( 297 ), ExtResource( 291 ), ExtResource( 293 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+}, {
 "frames": [ ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 314 ), ExtResource( 313 ), ExtResource( 315 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 309 ), ExtResource( 312 ) ],
 "loop": true,
 "name": "4",
@@ -809,11 +814,6 @@ animations = [ {
 "frames": [ ExtResource( 279 ), ExtResource( 278 ), ExtResource( 277 ), ExtResource( 283 ), ExtResource( 280 ), ExtResource( 282 ), ExtResource( 284 ), ExtResource( 281 ), ExtResource( 285 ), ExtResource( 333 ) ],
 "loop": true,
 "name": "1",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 290 ), ExtResource( 298 ), ExtResource( 286 ), ExtResource( 292 ), ExtResource( 288 ), ExtResource( 287 ), ExtResource( 295 ), ExtResource( 297 ), ExtResource( 291 ), ExtResource( 293 ) ],
-"loop": true,
-"name": "2",
 "speed": 7.5
 } ]
 
@@ -829,6 +829,11 @@ animations = [ {
 "name": "3",
 "speed": 7.5
 }, {
+"frames": [ ExtResource( 351 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 335 ), ExtResource( 366 ), ExtResource( 339 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 367 ), ExtResource( 370 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+}, {
 "frames": [ ExtResource( 346 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 352 ), ExtResource( 354 ), ExtResource( 353 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 373 ), ExtResource( 372 ) ],
 "loop": true,
 "name": "4",
@@ -837,11 +842,6 @@ animations = [ {
 "frames": [ ExtResource( 358 ), ExtResource( 337 ), ExtResource( 371 ), ExtResource( 362 ), ExtResource( 338 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 363 ), ExtResource( 334 ) ],
 "loop": true,
 "name": "1",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 351 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 335 ), ExtResource( 366 ), ExtResource( 339 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 367 ), ExtResource( 370 ) ],
-"loop": true,
-"name": "2",
 "speed": 7.5
 } ]
 
@@ -857,6 +857,11 @@ animations = [ {
 "name": "3",
 "speed": 7.5
 }, {
+"frames": [ ExtResource( 446 ), ExtResource( 399 ), ExtResource( 441 ), ExtResource( 422 ), ExtResource( 452 ), ExtResource( 418 ), ExtResource( 411 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 435 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+}, {
 "frames": [ ExtResource( 425 ), ExtResource( 431 ), ExtResource( 454 ), ExtResource( 436 ), ExtResource( 403 ), ExtResource( 404 ), ExtResource( 459 ), ExtResource( 430 ), ExtResource( 409 ), ExtResource( 410 ) ],
 "loop": true,
 "name": "4",
@@ -865,11 +870,6 @@ animations = [ {
 "frames": [ ExtResource( 376 ), ExtResource( 377 ), ExtResource( 414 ), ExtResource( 426 ), ExtResource( 412 ), ExtResource( 451 ), ExtResource( 406 ), ExtResource( 458 ), ExtResource( 423 ), ExtResource( 433 ) ],
 "loop": true,
 "name": "1",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 446 ), ExtResource( 399 ), ExtResource( 441 ), ExtResource( 422 ), ExtResource( 452 ), ExtResource( 418 ), ExtResource( 411 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 435 ) ],
-"loop": true,
-"name": "2",
 "speed": 7.5
 } ]
 
@@ -885,6 +885,11 @@ animations = [ {
 "name": "3",
 "speed": 7.5
 }, {
+"frames": [ ExtResource( 440 ), ExtResource( 442 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 467 ), ExtResource( 472 ), ExtResource( 466 ), ExtResource( 470 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+}, {
 "frames": [ ExtResource( 392 ), ExtResource( 385 ), ExtResource( 387 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 383 ), ExtResource( 382 ), ExtResource( 391 ), ExtResource( 393 ), ExtResource( 381 ) ],
 "loop": true,
 "name": "4",
@@ -893,11 +898,6 @@ animations = [ {
 "frames": [ ExtResource( 417 ), ExtResource( 449 ), ExtResource( 419 ), ExtResource( 460 ), ExtResource( 434 ), ExtResource( 429 ), ExtResource( 437 ), ExtResource( 432 ), ExtResource( 439 ), ExtResource( 450 ) ],
 "loop": true,
 "name": "1",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 440 ), ExtResource( 442 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 467 ), ExtResource( 472 ), ExtResource( 466 ), ExtResource( 470 ) ],
-"loop": true,
-"name": "2",
 "speed": 7.5
 } ]
 
@@ -913,6 +913,11 @@ animations = [ {
 "name": "3",
 "speed": 7.5
 }, {
+"frames": [ ExtResource( 519 ), ExtResource( 515 ), ExtResource( 514 ), ExtResource( 507 ), ExtResource( 520 ), ExtResource( 503 ), ExtResource( 517 ), ExtResource( 508 ), ExtResource( 504 ), ExtResource( 521 ) ],
+"loop": true,
+"name": "2",
+"speed": 7.5
+}, {
 "frames": [ ExtResource( 484 ), ExtResource( 511 ), ExtResource( 512 ), ExtResource( 485 ), ExtResource( 499 ), ExtResource( 486 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 493 ), ExtResource( 495 ) ],
 "loop": true,
 "name": "4",
@@ -921,11 +926,6 @@ animations = [ {
 "frames": [ ExtResource( 525 ), ExtResource( 491 ), ExtResource( 501 ), ExtResource( 492 ), ExtResource( 505 ), ExtResource( 502 ), ExtResource( 516 ), ExtResource( 506 ), ExtResource( 518 ), ExtResource( 523 ) ],
 "loop": true,
 "name": "1",
-"speed": 7.5
-}, {
-"frames": [ ExtResource( 519 ), ExtResource( 515 ), ExtResource( 514 ), ExtResource( 507 ), ExtResource( 520 ), ExtResource( 503 ), ExtResource( 517 ), ExtResource( 508 ), ExtResource( 504 ), ExtResource( 521 ) ],
-"loop": true,
-"name": "2",
 "speed": 7.5
 } ]
 
@@ -1022,9 +1022,9 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=31]
 animations = [ {
-"frames": [ ExtResource( 579 ), ExtResource( 565 ), ExtResource( 571 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 571 ), ExtResource( 565 ), ExtResource( 579 ) ],
+"frames": [ ExtResource( 566 ), ExtResource( 564 ), ExtResource( 567 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 567 ), ExtResource( 564 ), ExtResource( 566 ) ],
 "loop": true,
-"name": "9",
+"name": "11",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 588 ), ExtResource( 590 ), ExtResource( 587 ), ExtResource( 589 ), ExtResource( 589 ), ExtResource( 587 ), ExtResource( 590 ), ExtResource( 588 ) ],
@@ -1032,34 +1032,14 @@ animations = [ {
 "name": "14",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 591 ), ExtResource( 593 ), ExtResource( 592 ), ExtResource( 594 ), ExtResource( 594 ), ExtResource( 592 ), ExtResource( 593 ), ExtResource( 591 ) ],
-"loop": true,
-"name": "15",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 581 ), ExtResource( 563 ), ExtResource( 559 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 559 ), ExtResource( 563 ), ExtResource( 581 ) ],
-"loop": true,
-"name": "8",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 596 ), ExtResource( 598 ), ExtResource( 595 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 595 ), ExtResource( 598 ), ExtResource( 596 ) ],
-"loop": true,
-"name": "16",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 569 ), ExtResource( 570 ), ExtResource( 561 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 561 ), ExtResource( 570 ), ExtResource( 569 ) ],
-"loop": true,
-"name": "12",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 583 ), ExtResource( 576 ), ExtResource( 574 ), ExtResource( 582 ), ExtResource( 582 ), ExtResource( 574 ), ExtResource( 576 ), ExtResource( 583 ) ],
 "loop": true,
 "name": "7",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 566 ), ExtResource( 564 ), ExtResource( 567 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 567 ), ExtResource( 564 ), ExtResource( 566 ) ],
+"frames": [ ExtResource( 591 ), ExtResource( 593 ), ExtResource( 592 ), ExtResource( 594 ), ExtResource( 594 ), ExtResource( 592 ), ExtResource( 593 ), ExtResource( 591 ) ],
 "loop": true,
-"name": "11",
+"name": "15",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 578 ), ExtResource( 580 ), ExtResource( 568 ), ExtResource( 586 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 580 ), ExtResource( 578 ) ],
@@ -1067,9 +1047,29 @@ animations = [ {
 "name": "13",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 596 ), ExtResource( 598 ), ExtResource( 595 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 595 ), ExtResource( 598 ), ExtResource( 596 ) ],
+"loop": true,
+"name": "16",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 553 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 558 ), ExtResource( 558 ), ExtResource( 555 ), ExtResource( 554 ), ExtResource( 553 ) ],
 "loop": true,
 "name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 584 ), ExtResource( 572 ), ExtResource( 560 ), ExtResource( 585 ), ExtResource( 585 ), ExtResource( 560 ), ExtResource( 572 ), ExtResource( 584 ) ],
+"loop": true,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 569 ), ExtResource( 570 ), ExtResource( 561 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 561 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": true,
+"name": "12",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 581 ), ExtResource( 563 ), ExtResource( 559 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 559 ), ExtResource( 563 ), ExtResource( 581 ) ],
+"loop": true,
+"name": "8",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 557 ), ExtResource( 556 ), ExtResource( 551 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 551 ), ExtResource( 556 ), ExtResource( 557 ) ],
@@ -1082,14 +1082,14 @@ animations = [ {
 "name": "3",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 534 ), ExtResource( 535 ), ExtResource( 536 ), ExtResource( 537 ), ExtResource( 537 ), ExtResource( 536 ), ExtResource( 535 ), ExtResource( 534 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 549 ), ExtResource( 548 ), ExtResource( 550 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 550 ), ExtResource( 548 ), ExtResource( 549 ) ],
 "loop": true,
 "name": "4",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 584 ), ExtResource( 572 ), ExtResource( 560 ), ExtResource( 585 ), ExtResource( 585 ), ExtResource( 560 ), ExtResource( 572 ), ExtResource( 584 ) ],
-"loop": true,
-"name": "10",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 545 ), ExtResource( 543 ), ExtResource( 546 ), ExtResource( 544 ), ExtResource( 544 ), ExtResource( 546 ), ExtResource( 543 ), ExtResource( 545 ) ],
@@ -1097,9 +1097,9 @@ animations = [ {
 "name": "1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 534 ), ExtResource( 535 ), ExtResource( 536 ), ExtResource( 537 ), ExtResource( 537 ), ExtResource( 536 ), ExtResource( 535 ), ExtResource( 534 ) ],
+"frames": [ ExtResource( 579 ), ExtResource( 565 ), ExtResource( 571 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 571 ), ExtResource( 565 ), ExtResource( 579 ) ],
 "loop": true,
-"name": "2",
+"name": "9",
 "speed": 5.0
 } ]
 
@@ -1120,6 +1120,11 @@ animations = [ {
 "name": "3",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 608 ), ExtResource( 611 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 611 ), ExtResource( 608 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 617 ), ExtResource( 616 ), ExtResource( 612 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 618 ), ExtResource( 619 ) ],
 "loop": true,
 "name": "4",
@@ -1128,11 +1133,6 @@ animations = [ {
 "frames": [ ExtResource( 599 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 602 ), ExtResource( 601 ), ExtResource( 599 ) ],
 "loop": true,
 "name": "1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 608 ), ExtResource( 611 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 611 ), ExtResource( 608 ) ],
-"loop": true,
-"name": "2",
 "speed": 5.0
 } ]
 
@@ -1156,7 +1156,7 @@ position = Vector2( 512, 440 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "CleanMetal"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, -10 )
 flip_h = true
@@ -1176,7 +1176,6 @@ position = Vector2( 488, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 27 )
 animation = "4"
-frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1188,7 +1187,7 @@ position = Vector2( 520, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 26 )
 animation = "4"
-frame = 7
+frame = 9
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1200,7 +1199,7 @@ position = Vector2( 584, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 28 )
 animation = "4"
-frame = 4
+frame = 6
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1212,7 +1211,7 @@ position = Vector2( 552, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 29 )
 animation = "4"
-frame = 5
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1224,7 +1223,7 @@ position = Vector2( 616, 240 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 30 )
 animation = "4"
-frame = 3
+frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -1488,13 +1487,13 @@ interstitial_id = "ca-app-pub-4532904817900631/2817692610"
 [node name="Fireworks" type="AnimatedSprite" parent="."]
 position = Vector2( 1152, 272 )
 frames = SubResource( 25 )
-frame = 18
+frame = 35
 playing = true
 
 [node name="Fireworks2" type="AnimatedSprite" parent="."]
 position = Vector2( -128, 280 )
 frames = SubResource( 25 )
-frame = 16
+frame = 33
 playing = true
 
 [node name="Cake1" type="Sprite" parent="."]
@@ -1590,7 +1589,7 @@ position = Vector2( 928, 480 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 31 )
 animation = "16"
-frame = 5
+frame = 1
 playing = true
 
 [node name="Meatballs" type="Sprite" parent="."]
@@ -1603,7 +1602,7 @@ offset = Vector2( -1.09995, 0.397034 )
 position = Vector2( 712, 42 )
 frames = SubResource( 32 )
 animation = "6"
-frame = 7
+frame = 3
 playing = true
 
 [connection signal="animation_finished" from="Player" to="." method="_on_Player_animation_finished"]
