@@ -18,7 +18,7 @@ func load_sound_settings():
 		file.open(settings_file, File.WRITE)
 		soundOn = true
 		file.store_var(soundOn)
-	print("What is the value of soundOn variable: " + str(soundOn))
+	# print("What is the value of soundOn variable: " + str(soundOn))
 	
 func toggle_sound(soundVariable):
 	if soundVariable == true:
