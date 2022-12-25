@@ -8,17 +8,26 @@ Have fun unlocking the various pet slimes available!
 
 Will you be the lucky one to unlock the RARE and SPECIAL FIRE SLIME???? :D
 
+# Tech Stack
+
+GDScript & Godot Game Engine
+
 # Status of the game
 
-Active Development of the game was done from:
+Play the game here:
+
+1. https://melvinng.itch.io/mini-pets (Web Version)
+2. https://play.google.com/store/apps/details?id=org.godotengine.minipets (Android Version)
+
+Initial development of the game was done from:
 
 - 21/05/2021 - 29/05/2021
 - Process: Ideation (1 day) > Planning (1 day) > Rough Design (1 day) > Gathering assets (1 day) > Coding & Internal testing (5 days) > Release of Version 1.0
 
-Current status:
+Current status (last updated at 25/12/2022):
 
-- In active maintenance
-- After initial release of Version 1.0, I've spent a couple of hours every once in a while to update the game with new features and bug fixes.
+- Game is in active maintenance
+- After initial release of Version 1.0, I regularly update & enhance the game with new features and bug fixes
 
 Current version: Version 2.1 (as of 25/12/2022)
 
