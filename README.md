@@ -58,6 +58,8 @@ When re-exporting the app in future, you may encounter some issues/errors/app cr
 # Updates log
 
 - Updates to the game will be published here: https://sites.google.com/view/mini-pets-news
+- As of 20/05/2023:
+  - We have currently 2200+ downloads in Google Play Store & 750+ browsers plays in itch.io 🎉
 - As of 25/12/2022:
   - Mini Pets's latest version is **Version 2.1**
   - We have currently 2100+ downloads in Google Play Store & 650+ browsers plays in itch.io :D
